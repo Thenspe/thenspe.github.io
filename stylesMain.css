@@ -1,20 +1,30 @@
 * { /* Sets the default font and colour for the page */
 	font-family: "Century Gothic", sans-serif;
 	color: DimGray;
+	margin: 5px;
 }
-h1 {
+.HeadText { /*Formatting for the centred header text */
 	text-align: center;
 }
-/*
-this is a test - can I change all Headers at once?
-h {
-	color: blue;
-}
-Turns out that no, you cannot */
-
-h2 {
+h2 { /*Sets the large section headers all pretty and blue*/
 	color: White;
-	background-color: DodgerBlue;
+	background-color: ForestGreen;
 	border-radius: 25px;
 	padding: 10px;
+	margin: 15px;
+	margin-top: 30px; /*if you figure out the rotation, remove this */
+}
+h3 { /* brings the subheadings away from the edge and lines them up with the H2's */
+	margin-left: 15px
+}
+li { /*resets the list items to a margin of 0, since the global margin was overrriden */
+	margin: 0;
+}
+a { 
+	color: ForestGreen;
+	margin: 0;
+	text-decoration: none;
+}
+a:link {
+	font-weight: bold;
 }
