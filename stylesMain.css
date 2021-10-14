@@ -1,0 +1,20 @@
+* { /* Sets the default font and colour for the page */
+	font-family: "Century Gothic", sans-serif;
+	color: DimGray;
+}
+h1 {
+	text-align: center;
+}
+/*
+this is a test - can I change all Headers at once?
+h {
+	color: blue;
+}
+Turns out that no, you cannot */
+
+h2 {
+	color: White;
+	background-color: DodgerBlue;
+	border-radius: 25px;
+	padding: 10px;
+}
