@@ -4,7 +4,7 @@
 	margin: 5px;
 }
 body {
-	background-image: linear-gradient(to bottom left, DodgerBlue, White)
+	background-image: radial-gradient(to bottom left, AntiqueWhite, White)
 }
 .HeadText { /*Formatting for the centred header text */
 	text-align: center;
