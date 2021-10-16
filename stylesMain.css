@@ -3,6 +3,9 @@
 	color: DimGray;
 	margin: 5px;
 }
+body {
+	background-image: linear-gradient(to bottom left, DodgerBlue, White)
+}
 .HeadText { /*Formatting for the centred header text */
 	text-align: center;
 }
