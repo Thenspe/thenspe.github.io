@@ -6,7 +6,10 @@
 .HeadText { /*Formatting for the centred header text */
 	text-align: center;
 }
-h2 { /*Sets the large section headers all pretty and blue*/
+/*h2 sets the large section headers all pretty
+This was the style of the resume I made after the Earth Resources program,
+all from memory though, I can't find my original.*/
+h2 { 
 	color: White;
 	background-color: ForestGreen;
 	border-radius: 25px;
@@ -20,11 +23,22 @@ h3 { /* brings the subheadings away from the edge and lines them up with the H2'
 li { /*resets the list items to a margin of 0, since the global margin was overrriden */
 	margin: 0;
 }
-a { 
+a { /* sets the link colour to match the header bar colour */
 	color: ForestGreen;
 	margin: 0;
 	text-decoration: none;
-}
-a:link {
 	font-weight: bold;
+}
+img { /*This is for the sub-page maps, to keep them left oriented and aligned with a good border. */
+	border-style: solid;
+	border-width: 5px;
+	float: left;
+	margin-left: 15px;
+	margin-right: 10px;
+	margin-bottom: 15px;
+}
+/*this ID is to get the second heading to remain below the first map,
+so that everything lines up nicely and remains full-width */
+#second {
+	clear: both;
 }
