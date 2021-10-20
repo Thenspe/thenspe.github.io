@@ -6,6 +6,9 @@
 header { /*Formatting for the centred header text. source: https://www.w3schools.com/html/html5_semantic_elements.asp */
 	text-align: center;
 }
+.LowTop {
+	margin-top: 30px;
+}
 main {
 	margin-left: 100px;
 	margin-right: 100px;
@@ -60,6 +63,7 @@ a.HomePage {
 so that everything lines up nicely and remains full-width */
 section {
 	clear: both;
+	/* source: https://www.w3schools.com/cssref/pr_class_float.asp */
 }
 footer { /* source: https://www.w3schools.com/html/html5_semantic_elements.asp */
 	clear: both;
