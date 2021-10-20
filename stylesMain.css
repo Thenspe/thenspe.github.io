@@ -1,21 +1,27 @@
 * { /* Sets the default font and colour for the page */
-	font-family: "Century Gothic", sans-serif;
+	font-family: "Trebuchet MS", sans-serif;
 	color: DimGray;
 	margin: 5px;
 }
-.HeadText { /*Formatting for the centred header text */
+header { /*Formatting for the centred header text. source: https://www.w3schools.com/html/html5_semantic_elements.asp */
 	text-align: center;
+}
+main {
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 25px;
 }
 /*h2 sets the large section headers all pretty
 This was the style of the resume I made after the Earth Resources program,
 all from memory though, I can't find my original.*/
 h2 { 
 	color: White;
-	background-color: ForestGreen;
+	background-color: DodgerBlue;
 	border-radius: 25px;
 	padding: 10px;
+	padding-left: 20px;
 	margin: 15px;
-	margin-top: 30px; /*if you figure out the rotation, remove this */
+	margin-top: 30px; /*if you figure out the rotation, remove this. **update: the rotation requires javascript, so it won't be happening anytime soon */
 }
 h3 { /* brings the subheadings away from the edge and lines them up with the H2's */
 	margin-left: 15px
@@ -24,21 +30,44 @@ li { /*resets the list items to a margin of 0, since the global margin was overr
 	margin: 0;
 }
 a { /* sets the link colour to match the header bar colour */
-	color: ForestGreen;
+	color: DodgerBlue;
 	margin: 0;
 	text-decoration: none;
 	font-weight: bold;
 }
-img { /*This is for the sub-page maps, to keep them left oriented and aligned with a good border. */
+figure { /*This is for the sub-page maps, to keep them left oriented and aligned with a good border. */
 	border-style: solid;
 	border-width: 5px;
 	float: left;
 	margin-left: 15px;
 	margin-right: 10px;
 	margin-bottom: 15px;
+	/*source: https://www.w3schools.com/css/css3_images.asp */
+	max-width: 100%;
+	height: auto;
+}
+img {
+	margin: 0;
+	padding: 0;
+}
+a.HomePage {
+	color: White;
+}
+#references {
+	margin-top: 25px;
 }
 /*this ID is to get the second heading to remain below the first map,
 so that everything lines up nicely and remains full-width */
-#second {
+section {
 	clear: both;
+}
+footer { /* source: https://www.w3schools.com/html/html5_semantic_elements.asp */
+	clear: both;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	padding-top: 20px;
+	border-top-style: solid; /* source: https://www.w3schools.com/css/css_border.asp */
+	border-color: DimGray; /* source: https://www.w3schools.com/css/css_border_color.asp */
+	border-width: 1px; /* source: https://www.w3schools.com/css/css_border_width.asp */
 }
