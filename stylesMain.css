@@ -1,4 +1,8 @@
 /* styles for vandam.ca */
+html, body {
+    margin: 0;
+    padding: 0;
+}
 #map {
-    height: 100vw;
+    height: 100vh;
 }
