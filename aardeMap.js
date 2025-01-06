@@ -1,4 +1,4 @@
-console.log("update 28");
+console.log("update 29");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
