@@ -37,4 +37,16 @@ map.on('click', onMapClick);
 
 //add the geojson
 var mapThings = fetchJSON('mapitems.json').then(function(data) {return data})
-L.geoJSON(mapitems.json).addTo(map);
+
+//set geojson styles
+var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+L.geoJSON(mapThings, {pointToLayer: function (feature, latlng) {
+    return L.circleMarker(latlng, geojsonMarkerOptions);
+}}).addTo(map);
