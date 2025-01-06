@@ -36,7 +36,7 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 //add the geojson
-var mapThings = fetchJSON('mapitems.json').then(function(data) {return data})
+var mapThings = $.getJSON("mapitems.json");
 
 //set geojson styles
 var geojsonMarkerOptions = {
