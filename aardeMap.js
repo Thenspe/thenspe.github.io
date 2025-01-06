@@ -1,4 +1,4 @@
-console.log("update 7");
+console.log("update 8");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -57,16 +57,23 @@ var mapthings = {
 // $.getJSON("mapitems.json").addTo(map);
 
 var geojsonMarkerOptions = {
-    radius: 8,
-    fillColor: "#ff7800",
+    radius: 4,
+    fillColor: "#000",
     color: "#000",
     weight: 1,
     opacity: 1,
     fillOpacity: 0.8
 };
+function onEachFeature(feature, layer) {
+    //does this feature have a property named Size?
+    if (feature.properties && feature.properties.size) {
+        layer.bindPopup(feature.properties.size);
+    }
+}
 
 L.geoJSON(mapthings, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
-    }
+    },
+    onEachFeature: onEachFeature
 }).addTo(map);
