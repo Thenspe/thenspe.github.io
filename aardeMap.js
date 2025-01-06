@@ -36,8 +36,22 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 //add the geojson
+var mapthings{
+    "type": "Feature",
+    "properties": {
+        "name": "Yarth",
+        "size": "Village"
+    },
+    "geometry": {
+        "type":"Point",
+        "coordinates": [716.855,518.735]
+    }
+};
+L.geoJSON(mapthings).addTo(map);
+
 // var mapThings = $.getJSON("mapitems.json");
-$.getJSON("mapitems.json").addTo(map);
+// $.getJSON("mapitems.json").addTo(map);
+console.log("update2");
 
 //set geojson styles
 // var geojsonMarkerOptions = {
