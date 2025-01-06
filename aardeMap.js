@@ -1,4 +1,4 @@
-console.log("update 25");
+console.log("update 26");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -51,12 +51,12 @@ var geojsonMarkerOptions = {
     opacity: 1,
     fillOpacity: 0.8
 };
-// function onEachFeature(feature, layer) {
-//     //does this feature have a property named Size?
-//     if (feature.properties && feature.properties.name) {
-//         layer.bindPopup(feature.properties.name);
-//     }
-// }
+function onEachFeature(feature, layer) {
+    //checks each feature for the name of the town, and puts it in a popup?
+    if (feature.properties && feature.properties.name) {
+        layer.bindPopup(feature.properties.name);
+    }
+}
 
 L.geoJSON(townsLayer, {
     pointToLayer: function (feature, latlng) {

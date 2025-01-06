@@ -47,6 +47,6 @@ var towns = {
         }
     ]
 };
-var roads = {};
-var ruins = {};
-var politicalBoundaries = {};
+// var roads = {};
+// var ruins = {};
+// var politicalBoundaries = {};
