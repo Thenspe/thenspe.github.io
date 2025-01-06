@@ -1,4 +1,4 @@
-console.log("update 10");
+console.log("update 11");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -52,8 +52,7 @@ map.on('click', onMapClick);
 //     }
 // };
 
-var mapThings = $.get("mapitems.json");
-// $.getJSON("mapitems.json").addTo(map);
+var mapThings = mapthings = new L.geoJSON.AJAX("mapitems.json");
 
 var geojsonMarkerOptions = {
     radius: 4,
