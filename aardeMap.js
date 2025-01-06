@@ -1,8 +1,8 @@
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0
-});
-var bounds = [[0,0],[1000,1000]];
+}).setView([725,580]);
+var bounds = [[0,0],[1000,1000],1];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
 map.fitBounds(bounds);
 
