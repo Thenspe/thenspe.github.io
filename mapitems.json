@@ -1,0 +1,11 @@
+var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Yarth",
+        "size": "Village"
+    },
+    "geometry": {
+        "type":"Point",
+        "coordinates", [716.855,518.735]
+    }
+};

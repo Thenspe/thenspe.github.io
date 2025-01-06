@@ -36,15 +36,15 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "Yarth",
-        "size": "Village"
-    },
-    "geometry": {
-        "type":"Point",
-        "coordinates", [716.855,518.735]
-    }
-};
-L.geoJSON(geojsonFeature).addTo(map);
+// var geojsonFeature = {
+//     "type": "Feature",
+//     "properties": {
+//         "name": "Yarth",
+//         "size": "Village"
+//     },
+//     "geometry": {
+//         "type":"Point",
+//         "coordinates", [716.855,518.735]
+//     }
+// };
+// L.geoJSON(geojsonFeature).addTo(map);
