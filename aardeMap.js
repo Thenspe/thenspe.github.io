@@ -1,4 +1,4 @@
-console.log("update 26");
+console.log("update 27");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -41,7 +41,56 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 // add the geojson
-const townsLayer = L.geoJSON([towns]);
+// const townsLayer = L.geoJSON([towns]);
+var townsLayer = {
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Yarth",
+                "size": "Village",
+            },
+            "geometry": {
+                "type":"Point",
+                "coordinates": [518.057152,716.756712]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "South Ablein",
+                "size": "Village",
+            },
+            "geometry": {
+                "type":"Point",
+                "coordinates": [570.715998,705.829209]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "North Ablein",
+                "size": "Village",
+            },
+            "geometry": {
+                "type":"Point",
+                "coordinates": [574.656509,710.009409]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Fort Kairth",
+                "size": "Fort",
+            },
+            "geometry": {
+                "type":"Point",
+                "coordinates": [578.84216,682.123815]
+            }
+        }
+    ]
+};
 
 var geojsonMarkerOptions = {
     radius: 4,
