@@ -44,14 +44,14 @@ var mapthings = {
     },
     "geometry": {
         "type":"Point",
-        "coordinates": [716.756712,518.057152]
+        "coordinates": [518.057152,716.756712]
     }
 };
 // L.geoJSON(mapthings).addTo(map);
 
 // var mapThings = $.getJSON("mapitems.json");
 // $.getJSON("mapitems.json").addTo(map);
-console.log("update 4");
+console.log("update 5");
 
 var geojsonMarkerOptions = {
     radius: 8,
