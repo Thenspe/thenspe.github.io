@@ -1,6 +1,7 @@
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: 0
+    minZoom: 0,
+    zoomSnap: 0.5
 }).setView([725,580]);
 var bounds = [[0,0],[1000,1000],8];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
@@ -23,6 +24,7 @@ var options = {
     },
 };
 L.control.ruler(options).addTo(map);
+console.log("Zoom = ",map.getZoom)
 
 //click for coordinates
 var popup = L.popup();
