@@ -11,7 +11,7 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'days',
-        factor: 0.0002, //set to 0.007 for km
+        factor: 0.00025, //set to 0.007 for km
         decimal: 1,
         label: 'Distance:'
     },
