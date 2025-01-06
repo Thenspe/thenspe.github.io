@@ -46,4 +46,5 @@ var popup = L.popup();
 //         "coordinates", [716.855,518.735]
 //     }
 // };
-L.geoJSON(geojsonFeature).addTo(map);
+
+L.geoJSON(mapitems.json).addTo(map);
