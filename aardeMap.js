@@ -1,4 +1,4 @@
-console.log("update 19");
+console.log("update 20");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -70,7 +70,7 @@ function onEachFeature(feature, layer) {
     }
 }
 
-L.geoJSON(maptowns, {
+L.geoJSON(mapTowns, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
