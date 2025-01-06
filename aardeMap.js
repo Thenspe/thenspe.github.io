@@ -5,3 +5,9 @@ var map = L.map('map', {
 var bounds = [[0,0],[1000,750]];
 var image = L.imageOverlay('images/Region1.jpg',bounds).addTo(map);
 map.fitBounds(bounds);
+
+L.control.scale({
+    metric: true,
+    maxWidth: 100,
+    position: 'bottomleft'
+}).addTo(map);
