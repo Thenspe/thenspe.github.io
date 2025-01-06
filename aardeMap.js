@@ -1,4 +1,4 @@
-console.log("update 18");
+console.log("update 19");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -7,7 +7,7 @@ var map = L.map('map', {
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
 map.fitBounds(bounds);
-map.setView([735,600], 1.5);
+map.setView([735,600], 1);
 
 //ruler
 var options = {
@@ -41,17 +41,19 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 //add the geojson
-var mapthings = {
-    "type": "Feature",
-    "properties": {
-        "name": "Yarth",
-        "size": "Village"
-    },
-    "geometry": {
-        "type":"Point",
-        "coordinates": [518.057152,716.756712]
-    }
-};
+// var mapthings = {
+//     "type": "Feature",
+//     "properties": {
+//         "name": "Yarth",
+//         "size": "Village"
+//     },
+//     "geometry": {
+//         "type":"Point",
+//         "coordinates": [518.057152,716.756712]
+//     }
+// };
+
+var mapTowns = L.geoJSON([towns]) 
 
 var geojsonMarkerOptions = {
     radius: 4,
