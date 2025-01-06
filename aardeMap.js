@@ -18,8 +18,8 @@ L.control.scale({
 var options = {
     position: 'topleft',
     lengthUnit: {
-        factor: 0.539956803, //  from km to nm
-        display: 'Nautical Miles',
+        factor: 0.0,
+        display: 'km',
         decimal: 2,
     },
 };
