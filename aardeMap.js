@@ -19,7 +19,7 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'km',
-        factor: 0.003,
+        factor: 0.03,
         decimal: 1,
         label: 'Days of Travel'
     },
