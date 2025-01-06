@@ -1,6 +1,6 @@
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: -10
+    minZoom: 0
 });
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
@@ -11,7 +11,7 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'km',
-        factor: 0.003,
+        factor: 0.002,
         decimal: 1,
         label: 'Distance'
     },
@@ -23,3 +23,10 @@ var options = {
     },
 };
 L.control.ruler(options).addTo(map);
+
+//click for coordinates
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+
+map.on('click', onMapClick);
