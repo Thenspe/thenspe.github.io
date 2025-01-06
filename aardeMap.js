@@ -1,4 +1,4 @@
-console.log("update 12");
+console.log("update 13");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -40,19 +40,17 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 //add the geojson
-// var mapthings = {
-//     "type": "Feature",
-//     "properties": {
-//         "name": "Yarth",
-//         "size": "Village"
-//     },
-//     "geometry": {
-//         "type":"Point",
-//         "coordinates": [518.057152,716.756712]
-//     }
-// };
-
-var mapThings = mapthings = new L.geoJSON.AJAX("mapitems.json");
+var mapthings = {
+    "type": "Feature",
+    "properties": {
+        "name": "Yarth",
+        "size": "Village"
+    },
+    "geometry": {
+        "type":"Point",
+        "coordinates": [518.057152,716.756712]
+    }
+};
 
 var geojsonMarkerOptions = {
     radius: 4,
