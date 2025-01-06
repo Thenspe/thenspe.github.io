@@ -1,4 +1,4 @@
-console.log("update 9");
+console.log("update 10");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -52,7 +52,7 @@ map.on('click', onMapClick);
 //     }
 // };
 
-var mapThings = $.getJSON("mapitems.json");
+var mapThings = $.get("mapitems.json");
 // $.getJSON("mapitems.json").addTo(map);
 
 var geojsonMarkerOptions = {
@@ -65,8 +65,8 @@ var geojsonMarkerOptions = {
 };
 function onEachFeature(feature, layer) {
     //does this feature have a property named Size?
-    if (feature.properties && feature.properties.size) {
-        layer.bindPopup(feature.properties.size);
+    if (feature.properties && feature.properties.name) {
+        layer.bindPopup(feature.properties.name);
     }
 }
 
