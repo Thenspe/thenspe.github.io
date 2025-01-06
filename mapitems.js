@@ -26,6 +26,17 @@ var towns = {
         {
             "type": "Feature",
             "properties": {
+                "name": "North Ablein",
+                "size": "Village",
+            },
+            "geometry": {
+                "type":"Point",
+                "coordinates": [574.656509,710.009409]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Fort Kairth",
                 "size": "Fort",
             },
