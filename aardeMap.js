@@ -11,9 +11,9 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'km',
-        factor: 0.03,
+        factor: 0.003,
         decimal: 1,
-        label: 'Days of Travel'
+        label: 'Distance'
     },
     angleUnit: {
         display: '&deg;',           // This is the display value will be shown on the screen. Example: 'Gradian'
