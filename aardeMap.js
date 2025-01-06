@@ -1,4 +1,4 @@
-console.log("update 6");
+console.log("update 7");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -25,7 +25,8 @@ var options = {
     },
 };
 L.control.ruler(options).addTo(map);
-console.log("Zoom = ",map.getZoom)
+
+console.log("Zoom = ",map.getZoom());
 
 //click for coordinates
 var popup = L.popup();
