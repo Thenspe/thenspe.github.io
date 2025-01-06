@@ -45,24 +45,26 @@ var mapthings = {
     },
     "geometry": {
         "type":"Point",
-        "coordinates": [716.855,518.735]
+        "coordinates": [716.756712,518.057152]
     }
 };
-L.geoJSON(mapthings).addTo(map);
+// L.geoJSON(mapthings).addTo(map);
 
 // var mapThings = $.getJSON("mapitems.json");
 // $.getJSON("mapitems.json").addTo(map);
 console.log("update2");
 
-//set geojson styles
-// var geojsonMarkerOptions = {
-//     radius: 8,
-//     fillColor: "#ff7800",
-//     color: "#000",
-//     weight: 1,
-//     opacity: 1,
-//     fillOpacity: 0.8
-// };
-// L.geoJSON(mapThings, {pointToLayer: function (feature, latlng) {
-//     return L.circleMarker(latlng, geojsonMarkerOptions);
-// }}).addTo(map);
+var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+L.geoJSON(mapthings, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+    }
+}).addTo(map);
