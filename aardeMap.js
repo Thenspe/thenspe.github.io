@@ -37,7 +37,7 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 //add the geojson
-var mapthings{
+var mapthings = {
     "type": "Feature",
     "properties": {
         "name": "Yarth",
