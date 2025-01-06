@@ -58,7 +58,7 @@ function onEachFeature(feature, layer) {
     }
 }
 
-L.geoJSON(mapthings, {
+L.geoJSON(mapTowns, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
