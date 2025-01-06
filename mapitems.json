@@ -1,4 +1,4 @@
-var geojsonFeature = {
+{
     "type": "Feature",
     "properties": {
         "name": "Yarth",
@@ -6,6 +6,6 @@ var geojsonFeature = {
     },
     "geometry": {
         "type":"Point",
-        "coordinates", [716.855,518.735]
+        "coordinates": [716.855,518.735]
     }
 };
