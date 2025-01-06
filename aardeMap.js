@@ -42,6 +42,8 @@ map.on('click', onMapClick);
 
 // add the geojson
 const townsLayer = L.geoJSON(towns);
+console.log("Did this stop working because of the geojson error?")
+console.log("Eli  Eli  Eli  Eli")
 
 var geojsonMarkerOptions = {
     radius: 4,
