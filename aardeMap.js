@@ -1,4 +1,4 @@
-console.log("update 24");
+console.log("update 25");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -41,7 +41,7 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 // add the geojson
-var mapTowns = L.geoJSON([towns]);
+const townsLayer = L.geoJSON([towns]);
 
 var geojsonMarkerOptions = {
     radius: 4,
@@ -51,14 +51,14 @@ var geojsonMarkerOptions = {
     opacity: 1,
     fillOpacity: 0.8
 };
-function onEachFeature(feature, layer) {
-    //does this feature have a property named Size?
-    if (feature.properties && feature.properties.name) {
-        layer.bindPopup(feature.properties.name);
-    }
-}
+// function onEachFeature(feature, layer) {
+//     //does this feature have a property named Size?
+//     if (feature.properties && feature.properties.name) {
+//         layer.bindPopup(feature.properties.name);
+//     }
+// }
 
-L.geoJSON(mapTowns, {
+L.geoJSON(townsLayer, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
