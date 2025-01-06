@@ -1,4 +1,4 @@
-console.log("test")
+console.log("test");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0
