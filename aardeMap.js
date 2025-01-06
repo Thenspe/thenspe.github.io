@@ -1,4 +1,4 @@
-console.log("update 17");
+console.log("update 18");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -7,7 +7,7 @@ var map = L.map('map', {
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
 map.fitBounds(bounds);
-map.setView([735,600], 0.5);
+map.setView([735,600], 1.5);
 
 //ruler
 var options = {
