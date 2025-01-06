@@ -47,4 +47,4 @@ map.on('click', onMapClick);
 //         "coordinates", [716.855,518.735]
 //     }
 // };
-// L.geoJSON(geojsonFeature).addTo(map);
+L.geoJSON(geojsonFeature).addTo(map);
