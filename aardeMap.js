@@ -1,13 +1,26 @@
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: 0
+    minZoom: -10
 });
-var bounds = [[0,0],[1000,750]];
-var image = L.imageOverlay('images/Region1.jpg',bounds).addTo(map);
+var bounds = [[0,0],[1000000,1000000]];
+var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
 map.fitBounds(bounds);
 
+//scale bar
 L.control.scale({
     metric: true,
-    maxWidth: 100,
+    imperial: false,
+    maxWidth: 200,
     position: 'bottomleft'
 }).addTo(map);
+
+//ruler
+var options = {
+    position: 'topleft',
+    lengthUnit: {
+        factor: 0.539956803, //  from km to nm
+        display: 'Nautical Miles',
+        decimal: 2,
+    },
+};
+L.control.ruler(options).addTo(map);

@@ -3,6 +3,20 @@ html, body {
     margin: 0;
     padding: 0;
 }
-#map {
+main {
+    background-image:url("images/Parchment_blank.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    background-color:black;
     height: 100vh;
+}
+#map {
+    position: relative;
+    background-color: rgba(0,0,0,0);
+    /* padding: 2vh; */
+    top: 15vh;
+    left: 30vw;
+    width: 40vw;
+    height: 65vh;
 }
