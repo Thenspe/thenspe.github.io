@@ -11,7 +11,7 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'km',
-        factor: 0.005,
+        factor: 0.006,
         decimal: 1,
         label: 'Distance'
     },
@@ -35,3 +35,16 @@ function onMapClick(e) {
 }
 
 map.on('click', onMapClick);
+
+var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Yarth",
+        "size": "Village"
+    },
+    "geometry": {
+        "type":"Point",
+        "coordinates", [716.855,518.735]
+    }
+};
+L.geoJSON(geojsonFeature).addTo(map);
