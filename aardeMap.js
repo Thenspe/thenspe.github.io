@@ -40,24 +40,24 @@ function onMapClick(e) {
 };
 map.on('click', onMapClick);
 
-//add the geojson
-// var mapthings = {
-//     "type": "Feature",
-//     "properties": {
-//         "name": "Yarth",
-//         "size": "Village"
-//     },
-//     "geometry": {
-//         "type":"Point",
-//         "coordinates": [518.057152,716.756712]
-//     }
-// };
+// add the geojson
+var mapthings = {
+    "type": "Feature",
+    "properties": {
+        "name": "Yarth",
+        "size": "Village"
+    },
+    "geometry": {
+        "type":"Point",
+        "coordinates": [518.057152,716.756712]
+    }
+};
 
-var mapTowns = L.geoJSON([towns]);
+// var mapTowns = L.geoJSON([towns]);
 
 var geojsonMarkerOptions = {
     radius: 4,
-    fillColor: "#000",
+    fillColor: "#FFF",
     color: "#000",
     weight: 1,
     opacity: 1,
@@ -70,7 +70,7 @@ function onEachFeature(feature, layer) {
     }
 }
 
-L.geoJSON(mapTowns, {
+L.geoJSON(mapthings, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
