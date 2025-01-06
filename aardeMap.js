@@ -11,7 +11,7 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'km',
-        factor: 0.002,
+        factor: 0.005,
         decimal: 1,
         label: 'Distance'
     },
