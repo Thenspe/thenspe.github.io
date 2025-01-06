@@ -53,7 +53,7 @@ map.on('click', onMapClick);
 //     }
 // };
 
-var mapTowns = L.geoJSON([towns]) 
+var mapTowns = L.geoJSON([towns]);
 
 var geojsonMarkerOptions = {
     radius: 4,
@@ -70,7 +70,7 @@ function onEachFeature(feature, layer) {
     }
 }
 
-L.geoJSON(mapthings, {
+L.geoJSON(maptowns, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
