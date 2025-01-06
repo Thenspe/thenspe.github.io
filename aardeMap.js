@@ -10,10 +10,10 @@ map.fitBounds(bounds);
 var options = {
     position: 'topleft',
     lengthUnit: {
-        display: 'km',
-        factor: 0.008,
+        display: 'days',
+        factor: 0.0002,
         decimal: 1,
-        label: 'Distance'
+        label: 'Distance:'
     },
     angleUnit: {
         display: '&deg;',           // This is the display value will be shown on the screen. Example: 'Gradian'
