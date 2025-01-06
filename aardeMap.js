@@ -11,7 +11,7 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'days',
-        factor: 0.0002,
+        factor: 0.0002, //set to 0.007 for km
         decimal: 1,
         label: 'Distance:'
     },
@@ -27,14 +27,13 @@ L.control.ruler(options).addTo(map);
 //click for coordinates
 var popup = L.popup();
 
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
-}
-
-map.on('click', onMapClick);
+// function onMapClick(e) {
+//     popup
+//         .setLatLng(e.latlng)
+//         .setContent("You clicked the map at " + e.latlng.toString())
+//         .openOn(map);
+// };
+// map.on('click', onMapClick);
 
 // var geojsonFeature = {
 //     "type": "Feature",
