@@ -1,4 +1,4 @@
-console.log("update 29");
+console.log("update 30");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
@@ -41,7 +41,7 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 // add the geojson
-const townsLayer = L.geoJSON([towns]);
+const townsLayer = L.geoJSON(towns);
 
 var geojsonMarkerOptions = {
     radius: 4,
