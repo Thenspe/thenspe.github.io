@@ -25,8 +25,13 @@ var options = {
 L.control.ruler(options).addTo(map);
 
 //click for coordinates
+var popup = L.popup();
+
 function onMapClick(e) {
-    alert("You clicked the map at " + e.latlng);
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
 }
 
 map.on('click', onMapClick);
