@@ -1,4 +1,3 @@
-console.log("test");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0
@@ -52,7 +51,7 @@ var mapthings = {
 
 // var mapThings = $.getJSON("mapitems.json");
 // $.getJSON("mapitems.json").addTo(map);
-console.log("update2");
+console.log("update 4");
 
 var geojsonMarkerOptions = {
     radius: 8,
