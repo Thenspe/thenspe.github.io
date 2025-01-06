@@ -14,10 +14,11 @@ main {
 #map {
     position: relative;
     background-color: rgba(0,0,0,0);
+    border-radius: 5px;
     /* padding: 2vh; */
     top: 15vh;
     left: 25vw;
     width: 50vw;
     height: 65vh;
-    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    box-shadow: inset -15px -15px rgba(0,0,0,0.5);
 }
