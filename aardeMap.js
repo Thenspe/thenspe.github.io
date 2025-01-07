@@ -1,5 +1,6 @@
-console.log("update 34");
+console.log("update 35");
 require(mapitems.js);
+
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 0,
