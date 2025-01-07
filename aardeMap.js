@@ -1,4 +1,5 @@
-var updateNum = 45
+var updateNum = 46
+console.log("Update ",updateNum);
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
@@ -61,4 +62,14 @@ const townsLayer = L.geoJSON(towns, {
     },
     onEachFeature: onEachFeature,
     maxZoom: 1
-}).addTo(map);
+});
+
+map.on('zoomend',function() {
+    var currentZoom = map.getZoom();
+    if(currentZoom >= 1) {
+        townsLayer.addTo(map);
+    }
+    else {
+        townsLayer.remove();
+    }
+});
