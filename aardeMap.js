@@ -1,4 +1,4 @@
-var updateNum = 46
+var updateNum = 47
 console.log("Update ",updateNum);
 
 var map = L.map('map', {
@@ -56,6 +56,7 @@ function onEachFeature(feature, layer) {
     }
 }
 
+// Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
@@ -64,6 +65,7 @@ const townsLayer = L.geoJSON(towns, {
     maxZoom: 1
 });
 
+// show and hide items based on zoom level
 map.on('zoomend',function() {
     var currentZoom = map.getZoom();
     if(currentZoom >= 1) {
