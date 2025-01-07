@@ -1,4 +1,4 @@
-console.log("update 40");
+console.log("update 41");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
@@ -33,10 +33,10 @@ console.log("Zoom = ",map.getZoom());
 var popup = L.popup();
 
 function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
+    // popup
+    //     .setLatLng(e.latlng)
+    //     .openOn(map);
+    console.log("You clicked the map at " + e.latlng.toString())
     console.log("The current zoom is ", map.getZoom());
 };
 map.on('click', onMapClick);
