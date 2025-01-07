@@ -1,8 +1,9 @@
-console.log("update 42");
+console.log("update 43");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: -2,
+    minZoom: -.5,
+    maxZoom: 3,
     zoomSnap: 0.25
 });
 var bounds = [[0,0],[1000,1000]];
@@ -58,5 +59,6 @@ const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
-    onEachFeature: onEachFeature
+    onEachFeature: onEachFeature,
+    minZoom: 1
 }).addTo(map);
