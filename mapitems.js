@@ -1,4 +1,4 @@
-var towns = {
+let towns = {
     "type": "FeatureCollection",
     "features": [
         {

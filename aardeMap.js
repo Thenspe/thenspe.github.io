@@ -1,5 +1,4 @@
-console.log("update 35");
-require(mapitems.js);
+console.log("update 36");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
