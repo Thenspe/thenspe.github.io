@@ -1,4 +1,4 @@
-console.log("update 43");
+console.log("update 44");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
@@ -60,5 +60,5 @@ const townsLayer = L.geoJSON(towns, {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
     onEachFeature: onEachFeature,
-    minZoom: 1
+    maxZoom: 1
 }).addTo(map);
