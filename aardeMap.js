@@ -1,4 +1,4 @@
-console.log("update 41");
+console.log("update 42");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
