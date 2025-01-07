@@ -1,4 +1,4 @@
-console.log("update 36");
+console.log("update 37");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
@@ -42,7 +42,7 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 // add the geojson
-const townsLayer = L.geoJSON(towns);
+// const townsLayer = L.geoJSON(towns);
 
 var geojsonMarkerOptions = {
     radius: 4,
@@ -59,7 +59,7 @@ function onEachFeature(feature, layer) {
     }
 }
 
-L.geoJSON(townsLayer, {
+const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
