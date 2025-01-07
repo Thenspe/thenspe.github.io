@@ -1,13 +1,12 @@
-console.log("update 37");
+console.log("update 38");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: 0,
+    minZoom: 3,
     zoomSnap: 0.5
 });
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
-map.fitBounds(bounds);
 map.setView([735,600], 1);
 
 //ruler
@@ -38,11 +37,11 @@ function onMapClick(e) {
         .setLatLng(e.latlng)
         .setContent("You clicked the map at " + e.latlng.toString())
         .openOn(map);
+    console.log("The current zoom is ", map.getZoom());
 };
 map.on('click', onMapClick);
 
 // add the geojson
-// const townsLayer = L.geoJSON(towns);
 
 var geojsonMarkerOptions = {
     radius: 4,
