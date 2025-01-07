@@ -3,7 +3,7 @@ console.log("update 38");
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: 3,
-    zoomSnap: 0.5
+    zoomSnap: 0.25
 });
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
