@@ -33,11 +33,7 @@ console.log("Zoom = ",map.getZoom());
 var popup = L.popup();
 
 function onMapClick(e) {
-    // popup
-    //     .setLatLng(e.latlng)
-    //     .openOn(map);
-    console.log("You clicked the map at " + e.latlng.toString())
-    console.log("The current zoom is ", map.getZoom());
+    console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom());
 };
 map.on('click', onMapClick);
 
