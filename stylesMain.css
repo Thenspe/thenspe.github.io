@@ -12,11 +12,25 @@ main {
     height: 100vh;
 }
 #map {
-    position: relative;
+    position: fixed;
     background-color: rgba(0,0,0,0);
     /* padding: 2vh; */
     top: 15vh;
     left: 25vw;
     width: 50vw;
     height: 65vh;
+}
+#right {
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    top: 50vh;
+    left: 90vw;
+    width: 10vw;
+    height: 40vh;
+}
+#left {
+    background-color: yellow;
+    position: fixed;
+    top: 50vh;
+    left: 0vw;
 }
