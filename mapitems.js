@@ -50,3 +50,4 @@ let towns = {
 // var roads = {};
 // var ruins = {};
 // var politicalBoundaries = {};
+var factionAssets = {};
