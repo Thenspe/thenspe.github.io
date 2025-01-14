@@ -1,4 +1,4 @@
-var updateNum = 47
+var updateNum = 48
 console.log("Update ",updateNum);
 
 var map = L.map('map', {
@@ -28,6 +28,18 @@ var options = {
     },
 };
 L.control.ruler(options).addTo(map);
+
+// Initialize the FeatureGroup to store draw layers
+var drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+// Initialize the draw control and pass it the FeatureGroup of editable layers
+var drawControl = new L.Control.Draw({
+    edit: {
+        featureGroup: drawnItems
+    }
+});
+map.addControl(drawControl);
 
 console.log("Zoom = ",map.getZoom());
 
