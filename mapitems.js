@@ -1,21 +1,17 @@
 let towns = {
     "type": "FeatureCollection",
     "features": [
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "Yarth",
+        {"type": "Feature","properties": {"name": "Yarth",
                 "size": "Village",
+                "population": "1500",
+                "info": "Yarth is a small village at the edge of the Ruggengrat Mountains. Part of the kingdom of Danuthan, it boasts a few farms and some mining activity in the foothills.\nRecently the True Blood of Earth has sent a representative, Mehael, to try and proselytise their human-first messsage in the area.\nNeil has a contact here, and the local smith is a quiet but friendly fellow."
             },
             "geometry": {
                 "type":"Point",
                 "coordinates": [518.057152,716.756712]
             }
         },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "South Ablein",
+        {"type": "Feature","properties": {"name": "South Ablein",
                 "size": "Village",
             },
             "geometry": {
@@ -23,10 +19,7 @@ let towns = {
                 "coordinates": [570.715998,705.829209]
             }
         },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "North Ablein",
+        {"type": "Feature","properties": {"name": "North Ablein",
                 "size": "Village",
             },
             "geometry": {
@@ -34,10 +27,7 @@ let towns = {
                 "coordinates": [574.656509,710.009409]
             }
         },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "Fort Kairth",
+        {"type": "Feature","properties": {"name": "Fort Kairth",
                 "size": "Fort",
             },
             "geometry": {

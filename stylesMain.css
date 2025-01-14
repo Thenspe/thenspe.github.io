@@ -20,9 +20,9 @@ main {
     position: absolute;
     background-color: rgba(0,0,0,0);
     /* padding: 2vh; */
-    top: 8%;
+    top: 6%;
     left: 24%;
-    width: 55%;
+    width: 50%;
     height: 85%;
 }
 #right {
@@ -31,15 +31,15 @@ main {
     top: 40%;
     left: 78%;
     width: 12%;
-    height: 40%;
-    rotate: 18deg;
+    height: 35%;
+    rotate: 16deg;
 }
 #left {
     background-color: yellow;
     position: absolute;
-    top: 25%;
-    left: 10%;
-    width: 11%;
-    height: 30%;
+    top: 30%;
+    left: 5%;
+    width: 10%;
+    height: 25%;
     rotate: -22deg;
 }
