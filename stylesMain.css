@@ -25,16 +25,16 @@ main {
     position: fixed;
     top: 40vh;
     left: 80vw;
-    width: 10vw;
+    width: 12vw;
     height: 40vh;
-    rotate: 22deg;
+    rotate: 18deg;
 }
 #left {
     background-color: yellow;
     position: fixed;
-    top: 35vh;
+    top: 25vh;
     left: 10vw;
-    width: 20vw;
+    width: 11vw;
     height: 30vh;
     rotate: -22deg;
 }
