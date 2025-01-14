@@ -1,12 +1,11 @@
-var updateNum = 51
+var updateNum = 52
 console.log("Update ",updateNum);
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: -.5,
     maxZoom: 3,
-    zoomSnap: 0.25,
-    drawControl: true
+    zoomSnap: 0.25
 });
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
@@ -29,18 +28,6 @@ var options = {
     },
 };
 L.control.ruler(options).addTo(map);
-
-// Initialize the FeatureGroup to store draw layers
-var drawnItems = new L.FeatureGroup();
-map.addLayer(drawnItems);
-
-// Initialize the draw control and pass it the FeatureGroup of editable layers
-var drawControl = new L.Control.Draw({
-    edit: {
-        featureGroup: drawnItems
-    }
-});
-map.addControl(drawControl);
 
 console.log("Zoom = ",map.getZoom());
 
