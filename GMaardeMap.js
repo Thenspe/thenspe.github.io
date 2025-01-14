@@ -1,4 +1,4 @@
-var updateNum = 48
+var updateNum = 49
 console.log("Update ",updateNum);
 
 var map = L.map('map', {
