@@ -15,24 +15,26 @@ main {
     position: fixed;
     background-color: rgba(0,0,0,0);
     /* padding: 2vh; */
-    top: 13vh;
-    left: 22vw;
-    width: 60vw;
-    height: 70vh;
+    top: 8vh;
+    left: 24vw;
+    width: 55vw;
+    height: 85vh;
 }
 #right {
     background-color: rgba(0,0,0,1);
     position: fixed;
-    top: 50vh;
+    top: 40vh;
     left: 80vw;
     width: 10vw;
     height: 40vh;
+    rotate: 22deg;
 }
 #left {
     background-color: yellow;
     position: fixed;
-    top: 50vh;
-    left: 0vw;
-    width: 10vw;
-    height: 20vh;
+    top: 35vh;
+    left: 10vw;
+    width: 20vw;
+    height: 30vh;
+    rotate: -22deg;
 }
