@@ -13,7 +13,8 @@ main {
     background-size:contain;
     background-position: center;
     background-color:black;
-    height: 100vh;
+    max-height: 100vh;
+    height: 100%;
 }
 #map {
     position: absolute;
