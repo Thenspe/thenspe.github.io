@@ -11,7 +11,7 @@ main {
     background-image:url("images/Parchment.png");
     background-repeat: no-repeat;
     background-size:contain;
-    background-position: center;
+    /* background-position: center; */
     background-color:black;
     max-height: 100vh;
     height: 100%;
