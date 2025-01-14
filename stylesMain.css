@@ -21,9 +21,9 @@ main {
     background-color: rgba(0,0,0,0);
     /* padding: 2vh; */
     top: 6%;
-    left: 24%;
+    left: 25%;
     width: 50%;
-    height: 83%;
+    height: 82%;
 }
 #right {
     background-color: rgba(0,0,0,1);
@@ -32,14 +32,14 @@ main {
     left: 79%;
     width: 12%;
     height: 35%;
-    rotate: 15deg;
+    rotate: 13deg;
 }
 #left {
     background-color: yellow;
     position: absolute;
-    top: 35%;
-    left: 8%;
-    width: 10%;
+    top: 32%;
+    left: 9%;
+    width: 12%;
     height: 25%;
     rotate: -22deg;
 }
