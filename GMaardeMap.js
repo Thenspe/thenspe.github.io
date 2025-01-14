@@ -5,7 +5,8 @@ var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: -.5,
     maxZoom: 3,
-    zoomSnap: 0.25
+    zoomSnap: 0.25,
+    drawControl: true
 });
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
