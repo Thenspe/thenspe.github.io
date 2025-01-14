@@ -23,22 +23,22 @@ main {
     top: 6%;
     left: 24%;
     width: 50%;
-    height: 85%;
+    height: 83%;
 }
 #right {
     background-color: rgba(0,0,0,1);
     position: absolute;
-    top: 40%;
-    left: 78%;
+    top: 39%;
+    left: 79%;
     width: 12%;
     height: 35%;
-    rotate: 16deg;
+    rotate: 15deg;
 }
 #left {
     background-color: yellow;
     position: absolute;
-    top: 30%;
-    left: 5%;
+    top: 35%;
+    left: 8%;
     width: 10%;
     height: 25%;
     rotate: -22deg;
