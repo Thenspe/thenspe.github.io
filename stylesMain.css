@@ -4,6 +4,10 @@ html, body {
     padding: 0;
 }
 main {
+    height: 100vh;
+}
+#parchment {
+    position: relative;
     background-image:url("images/Parchment.png");
     background-repeat: no-repeat;
     background-size:contain;
@@ -12,29 +16,29 @@ main {
     height: 100vh;
 }
 #map {
-    position: fixed;
+    position: absolute;
     background-color: rgba(0,0,0,0);
     /* padding: 2vh; */
-    top: 8vh;
-    left: 24vw;
-    width: 55vw;
-    height: 85vh;
+    top: 8%;
+    left: 24%;
+    width: 55%;
+    height: 85%;
 }
 #right {
     background-color: rgba(0,0,0,1);
-    position: fixed;
-    top: 40vh;
-    left: 80vw;
-    width: 12vw;
-    height: 40vh;
+    position: absolute;
+    top: 40%;
+    left: 805;
+    width: 12%;
+    height: 40%;
     rotate: 18deg;
 }
 #left {
     background-color: yellow;
-    position: fixed;
-    top: 25vh;
-    left: 10vw;
-    width: 11vw;
-    height: 30vh;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 11%;
+    height: 30%;
     rotate: -22deg;
 }
