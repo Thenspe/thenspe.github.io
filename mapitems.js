@@ -8,7 +8,7 @@ let towns = {
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [518.057152,716.756712]
+                "coordinates": [633.364588,725.193434]
             }
         },
         {"type": "Feature","properties": {"name": "South Ablein",
@@ -16,7 +16,7 @@ let towns = {
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [570.715998,705.829209]
+                "coordinates": [673.249547,723.192214]
             }
         },
         {"type": "Feature","properties": {"name": "North Ablein",
@@ -24,7 +24,7 @@ let towns = {
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [574.656509,710.009409]
+                "coordinates": [676.125265,725.193434]
             }
         },
         {"type": "Feature","properties": {"name": "Fort Kairth",
@@ -32,7 +32,7 @@ let towns = {
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [578.84216,682.123815]
+                "coordinates": [649.243553,692.048222]
             }
         }
     ]
