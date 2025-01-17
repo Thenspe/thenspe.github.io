@@ -43,7 +43,7 @@ main {
     height: 80%;
 }
 #right {
-    background-color: rgba(0,0,0,1);
+    /* background-color: rgba(0,0,0,1); */
     position: absolute;
     top: 38%;
     left: 83%;
@@ -52,9 +52,9 @@ main {
     rotate: 13deg;
 }
 #left {
-    background-color: yellow;
+    /* background-color: yellow; */
     position: absolute;
-    top: 29.5%;
+    top: 30%;
     left: 1.5%;
     width: 13%;
     height: 23%;
