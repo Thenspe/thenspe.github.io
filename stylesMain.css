@@ -54,10 +54,9 @@ p {
 #left {
     background-color: yellow;
     position: absolute;
-    top: 30%;
+    top: 31%;
     left: 1.5%;
     width: 13%;
     height: 23%;
     rotate: -22.5deg;
-    border-top-left-radius: 20%;
 }
