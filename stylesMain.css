@@ -20,8 +20,8 @@ main {
     background-color:black;
     height: auto;
     width: auto;
-    min-height: 250px;
-    min-width: 250px;
+    /* min-height: 250px; */
+    /* min-width: 250px; */
     display: inline-block;
 }
 #map {
@@ -29,24 +29,24 @@ main {
     background-color: rgba(0,0,0,0);
     /* padding: 2vh; */
     top: 6%;
-    left: 25%;
-    width: 50%;
+    left: 22.5%;
+    width: 55%;
     height: 82%;
 }
 #right {
     background-color: rgba(0,0,0,1);
     position: absolute;
     top: 39%;
-    left: 85%;
-    width: 12%;
+    left: 82%;
+    width: 13%;
     height: 35%;
     rotate: 13deg;
 }
 #left {
     background-color: yellow;
     position: absolute;
-    top: 32%;
-    left: 4%;
+    top: 31%;
+    left: 0.5%;
     width: 12%;
     height: 25%;
     rotate: -22deg;
