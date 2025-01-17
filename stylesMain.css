@@ -39,15 +39,15 @@ main {
     top: 39%;
     left: 83%;
     width: 15%;
-    height: 35%;
+    height: 32%;
     rotate: 13deg;
 }
 #left {
     background-color: yellow;
     position: absolute;
-    top: 31%;
+    top: 30%;
     left: 1.5%;
-    width: 15%;
+    width: 13%;
     height: 25%;
     rotate: -22deg;
 }
