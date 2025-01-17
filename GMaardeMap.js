@@ -1,4 +1,4 @@
-var updateNum = 107
+var updateNum = 108
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -10,7 +10,7 @@ var map = L.map('map', {
 });
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/Aarde_map.png',bounds).addTo(map);
-map.setView([735,600], 1);
+map.setView([735,600], 1.5);
 
 //Measurement tool
 var options = {
@@ -45,8 +45,8 @@ var geojsonMarkerOptions = {
 //setup icons for use by the geojson layers
 var fortIcon = L.icon({
     iconURL: "images/iconsFort.png",
-    iconSize: [115, 115],
-    iconAnchor: [50, 50],
+    // iconSize: [115, 115],
+    // iconAnchor: [50, 50],
 });
 
 // Add the towns and villages
