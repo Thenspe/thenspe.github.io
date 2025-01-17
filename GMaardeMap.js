@@ -56,7 +56,7 @@ const townsLayer = L.geoJSON(towns, {
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
-        })
+        });
     },
     // onEachFeature: onEachFeature,
     maxZoom: 1
