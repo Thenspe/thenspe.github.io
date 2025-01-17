@@ -1,4 +1,4 @@
-var updateNum = 79
+var updateNum = 80
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -39,27 +39,27 @@ console.log("Zoom = ",map.getZoom());
 // add the geojson
 
 var geojsonMarkerOptions = {
-    radius: 6,
+    // radius: 6,
     fillColor: "#000",
     color: "#000",
     weight: 1,
     opacity: 1,
     fillOpacity: 1,
 };
-// function onEachFeature(feature, layer) {
-//     //checks each feature for the name of the town, and puts it in a popup
-//     if (feature.properties && feature.properties.name) {
-//         layer.bindPopup(feature.properties.name);
-//         // document.getElementById("title").innerHTML = feature.properties.name;
-//         // document.getElementById("pop") = feature.properties.population;
-//         // document.getElementById("information") = feature.properties.info;
-//     }
-// }
+function onEachFeature(feature, layer) {
+    //checks each feature for the name of the town, and puts it in a popup
+    if (feature.properties && feature.properties.name) {
+        layer.bindPopup(feature.properties.name);
+        // document.getElementById("title").innerHTML = feature.properties.name;
+        // document.getElementById("pop") = feature.properties.population;
+        // document.getElementById("information") = feature.properties.info;
+    }
+}
 
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions);
+        return L.marker(latlng, geojsonMarkerOptions);
     },
     onEachFeature: onEachFeature,
     maxZoom: 1
