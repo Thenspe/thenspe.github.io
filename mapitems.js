@@ -69,7 +69,7 @@ var factionAssets = {
             "type": "Feature",
             "properties": {
                 "name": "Mercenaries",
-                "colour": "yellow",
+                "colour": "yellow", //dbd00e
                 "icon":"BoI"
             },
             "geometry": {
@@ -81,7 +81,7 @@ var factionAssets = {
             "type": "Feature",
             "properties": {
                 "name": "Kloshtaggen",
-                "colour": "purple",
+                "colour": "purple", //
                 "icon":"BoI"
             },
             "geometry": {
@@ -93,7 +93,7 @@ var factionAssets = {
             "type": "Feature",
             "properties": {
                 "name": "Artefactors",
-                "colour": "pink",
+                "colour": "pink", //d41e80
                 "icon":"BoI"
             },
             "geometry": {
