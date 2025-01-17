@@ -1,11 +1,11 @@
-var updateNum = 82
+var updateNum = 83
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: -.5,
-    maxZoom: 3,
+    maxZoom: 3.5,
     zoomSnap: 0.25
 });
 var bounds = [[0,0],[1000,1000]];
@@ -32,10 +32,6 @@ L.control.ruler(options).addTo(map);
 
 console.log("Zoom = ",map.getZoom());
 
-//click for coordinates
-// var popup = L.popup();
-
-
 // add the geojson
 
 var geojsonMarkerOptions = {
@@ -61,7 +57,7 @@ const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
     },
-    onEachFeature: onEachFeature,
+    // onEachFeature: onEachFeature,
     maxZoom: 1
 });
 
@@ -87,5 +83,5 @@ map.on('click', onMapClick);
 
 //Check if an object was clicked on, and display info if true
 map.on('popupopen', function(e) {
-    console.log("it worked");
+    console.log("it still works");
 } );
