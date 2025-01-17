@@ -1,4 +1,4 @@
-var updateNum = 78
+var updateNum = 79
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -44,6 +44,7 @@ var geojsonMarkerOptions = {
     color: "#000",
     weight: 1,
     opacity: 1,
+    fillOpacity: 1,
 };
 // function onEachFeature(feature, layer) {
 //     //checks each feature for the name of the town, and puts it in a popup
@@ -85,6 +86,6 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 //Check if an object was clicked on, and display info if true
-map.on('click', function(e) {
-    alert(e.latlng);
+map.on('popupopen', function(e) {
+    console.log("it worked");
 } );
