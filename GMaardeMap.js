@@ -49,13 +49,12 @@ var geojsonMarkerOptions = {
     color: "#000",
     weight: 1,
     opacity: 1,
-    fillOpacity: 0.8
 };
 function onEachFeature(feature, layer) {
-    //checks each feature for the name of the town, and puts it in a popup?
+    //checks each feature for the name of the town, and puts it in a popup
     if (feature.properties && feature.properties.name) {
         layer.bindPopup(feature.properties.name);
-        document.getElementById("title").innerHTML = feature.properties.name;
+        // document.getElementById("title").innerHTML = feature.properties.name;
         // document.getElementById("pop") = feature.properties.population;
         // document.getElementById("information") = feature.properties.info;
     }
