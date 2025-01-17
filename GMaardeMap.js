@@ -1,4 +1,4 @@
-var updateNum = 90
+var updateNum = 91
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -43,23 +43,37 @@ var geojsonMarkerOptions = {
     fillOpacity: 1,
 };
 // function onEachFeature(feature, layer) {
-//     //checks each feature for the name of the town, and puts it in a popup
-//     if (feature.properties && feature.properties.name) {
-//         // layer.bindPopup(feature.properties.name);
-//         // document.getElementById("title").innerHTML = feature.properties.name;
-//         // document.getElementById("pop") = feature.properties.population;
-//         // document.getElementById("information") = feature.properties.info;
+
+//     if (feature.properties && feature.properties.size) {
+//         if (feature.properties.size = "village") {
+
+//         }
 //     }
 // }
+
+//setup icons for use by the geojson layers
+var fortIcon = L.icon({
+    iconURL: "images/iconsFort",
+    iconSize: [15,15]
+});
 
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
+        if(feature.properties.type = 'Fort') {
+            return L.marker(latlng,fortIcon,feature).on('click', function(e){
+                document.getElementById("title").innerHTML = feature.properties.name;
+                document.getElementById("population").innerHTML = feature.properties.population;
+                document.getElementById("information").innerHTML = feature.properties.info;
+            });
+        }
+        else {
+            return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
         });
+    }
     },
     // onEachFeature: onEachFeature,
     maxZoom: 1
