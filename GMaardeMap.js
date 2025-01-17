@@ -1,4 +1,4 @@
-var updateNum = 96
+var updateNum = 97
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -56,19 +56,20 @@ const townsLayer = L.geoJSON(towns, {
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
-        });
+        })
     },
     // onEachFeature: onEachFeature,
     maxZoom: 1
 });
 
-townsLayer.eachLayer(function (feature) {
-    switch(feature.properties.size) {
-        case "Fort":
-            console.log("something happened");
-            break;          
-    }
-});
+// set format of forts and cities
+// townsLayer.eachLayer(function (feature) {
+//     switch(feature.properties.size) {
+//         case "Fort":
+//             console.log("something happened");
+//             break;          
+//     }
+// });
 
 // show and hide items based on zoom level
 map.on('zoomend',function() {
