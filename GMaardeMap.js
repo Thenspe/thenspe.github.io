@@ -1,6 +1,6 @@
 var updateNum = 62
 console.log("Update ",updateNum);
-var left = document.getElementById("left");
+// var left = document.getElementById("left");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
