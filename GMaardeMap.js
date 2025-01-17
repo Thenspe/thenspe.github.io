@@ -1,4 +1,4 @@
-var updateNum = 92
+var updateNum = 93
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -42,15 +42,6 @@ var geojsonMarkerOptions = {
     opacity: 1,
     fillOpacity: 1,
 };
-// function onEachFeature(feature, layer) {
-
-//     if (feature.properties && feature.properties.size) {
-//         if (feature.properties.size = "village") {
-
-//         }
-//     }
-// }
-
 //setup icons for use by the geojson layers
 var fortIcon = L.icon({
     iconURL: "images/iconsFort",
@@ -66,8 +57,16 @@ const townsLayer = L.geoJSON(towns, {
             document.getElementById("information").innerHTML = feature.properties.info;
         });
     },
-    // onEachFeature: onEachFeature,
+    onEachFeature: onEachFeature,
     maxZoom: 1
+});
+
+townsLayer.eachLayer(function (feature) {
+    switch(feature.properties.type) {
+        case "Fort":
+            setStyle
+            break;          
+    }
 });
 
 // show and hide items based on zoom level
