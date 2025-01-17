@@ -1,5 +1,6 @@
-var updateNum = 59
+var updateNum = 60
 console.log("Update ",updateNum);
+var left = document.getElementById("left");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
@@ -27,10 +28,7 @@ var options = {
         label: 'Bearing:'
     },
 };
-L.control.ruler(options).addTo(map);
-document.getElementById("left").appendChild(
-    L.control.layers(ruler).onAdd(map)
-);
+L.control.ruler(options).addTo(left);
 
 console.log("Zoom = ",map.getZoom());
 
