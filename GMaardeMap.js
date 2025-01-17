@@ -1,4 +1,4 @@
-var updateNum = 62
+var updateNum = 63
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -28,7 +28,7 @@ var options = {
         label: 'Bearing:'
     },
 };
-L.control.ruler(options).addTo(left);
+L.control.ruler(options).addTo(map);
 
 console.log("Zoom = ",map.getZoom());
 
@@ -37,6 +37,7 @@ var popup = L.popup();
 
 function onMapClick(e) {
     console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum);
+    document.getElementById("left").innerHTML("You clicked the map.");
 };
 map.on('click', onMapClick);
 
