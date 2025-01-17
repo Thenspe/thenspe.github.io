@@ -52,11 +52,11 @@ p {
     rotate: 13deg;
 }
 #left {
-    background-color: yellow;
+    /* background-color: yellow; */
     position: absolute;
     top: 32%;
     left: 2%;
-    width: 13%;
+    width: 12%;
     height: 21%;
     rotate: -22.5deg;
 }
