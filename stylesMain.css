@@ -45,7 +45,7 @@ main {
     rotate: 13deg;
 }
 #left {
-    /* background-color: yellow; */
+    background-color: yellow;
     position: absolute;
     top: 30%;
     left: 1.5%;
