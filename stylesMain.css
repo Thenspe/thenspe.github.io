@@ -47,7 +47,7 @@ main {
     position: absolute;
     top: 38%;
     left: 83%;
-    width: 14%;
+    width: 13%;
     height: 32%;
     rotate: 13deg;
 }
@@ -59,4 +59,5 @@ main {
     width: 13%;
     height: 23%;
     rotate: -22.5deg;
+    border-top-left-radius: 10%;
 }
