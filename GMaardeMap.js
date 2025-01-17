@@ -1,4 +1,4 @@
-var updateNum = 101
+var updateNum = 102
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -54,7 +54,7 @@ const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
         switch (feature.properties.size) {
             case 'Fort':
-                return l.marker({icon: fortIcon})
+                return L.marker({icon: fortIcon})
             default:
                 return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
                 document.getElementById("title").innerHTML = feature.properties.name;
