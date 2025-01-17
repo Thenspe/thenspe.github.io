@@ -1,4 +1,4 @@
-var updateNum = 85
+var updateNum = 86
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -42,15 +42,15 @@ var geojsonMarkerOptions = {
     opacity: 1,
     fillOpacity: 1,
 };
-function onEachFeature(feature, layer) {
-    //checks each feature for the name of the town, and puts it in a popup
-    if (feature.properties && feature.properties.name) {
-        // layer.bindPopup(feature.properties.name);
-        // document.getElementById("title").innerHTML = feature.properties.name;
-        // document.getElementById("pop") = feature.properties.population;
-        // document.getElementById("information") = feature.properties.info;
-    }
-}
+// function onEachFeature(feature, layer) {
+//     //checks each feature for the name of the town, and puts it in a popup
+//     if (feature.properties && feature.properties.name) {
+//         // layer.bindPopup(feature.properties.name);
+//         // document.getElementById("title").innerHTML = feature.properties.name;
+//         // document.getElementById("pop") = feature.properties.population;
+//         // document.getElementById("information") = feature.properties.info;
+//     }
+// }
 
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
@@ -82,6 +82,6 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 //Check if an object was clicked on, and display info if true
-map.on('popupopen', function(e) {
-    console.log("it still works");
+townsLayer.on('click', function(e) {
+    console.log("it works when you click it");
 } );
