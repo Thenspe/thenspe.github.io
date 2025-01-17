@@ -1,4 +1,4 @@
-var updateNum = 110
+var updateNum = 111
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -52,20 +52,31 @@ var fortIcon = L.icon({
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
-        // switch (feature.properties.size) {
-        //     case 'Fort':
-        //         return L.marker(latlng,{icon: fortIcon});
-        //     case 'Village':
-                return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
-                document.getElementById("title").innerHTML = feature.properties.name;
-                document.getElementById("population").innerHTML = feature.properties.population;
-                document.getElementById("information").innerHTML = feature.properties.info;
-            });
-        // }
+        return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
+        document.getElementById("title").innerHTML = feature.properties.name;
+        document.getElementById("population").innerHTML = feature.properties.population;
+        document.getElementById("information").innerHTML = feature.properties.info;
+        });
     },
     // onEachFeature: onEachFeature,
     maxZoom: 1
 });
+// const townsLayer = L.geoJSON(towns, {
+//     pointToLayer: function (feature, latlng) {
+//         switch (feature.properties.size) {
+//             case 'Fort':
+//                 return L.marker(latlng,{icon: fortIcon});
+//             case 'Village':
+//                 return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
+//                 document.getElementById("title").innerHTML = feature.properties.name;
+//                 document.getElementById("population").innerHTML = feature.properties.population;
+//                 document.getElementById("information").innerHTML = feature.properties.info;
+//             });
+//         }
+//     },
+//     // onEachFeature: onEachFeature,
+//     maxZoom: 1
+// });
 
 // show and hide items based on zoom level
 map.on('zoomend',function() {
