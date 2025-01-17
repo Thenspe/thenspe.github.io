@@ -1,4 +1,4 @@
-var updateNum = 74
+var updateNum = 75
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -44,8 +44,8 @@ map.on('click', onMapClick);
 // add the geojson
 
 var geojsonMarkerOptions = {
-    radius: 4,
-    fillColor: "#FFF",
+    radius: 6,
+    fillColor: "#000",
     color: "#000",
     weight: 1,
     opacity: 1,
@@ -55,6 +55,7 @@ function onEachFeature(feature, layer) {
     //checks each feature for the name of the town, and puts it in a popup?
     if (feature.properties && feature.properties.name) {
         layer.bindPopup(feature.properties.name);
+        document.getElementById("title") = feature.properties.name;
     }
 }
 
