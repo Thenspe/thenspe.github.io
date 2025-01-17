@@ -1,4 +1,4 @@
-var updateNum = 95
+var updateNum = 96
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -65,7 +65,7 @@ const townsLayer = L.geoJSON(towns, {
 townsLayer.eachLayer(function (feature) {
     switch(feature.properties.size) {
         case "Fort":
-            setStyle
+            console.log("something happened");
             break;          
     }
 });
