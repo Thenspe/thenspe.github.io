@@ -1,4 +1,4 @@
-var updateNum = 117
+var updateNum = 118
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -50,31 +50,31 @@ var fortIcon = L.icon({
 });
 
 // Add the towns and villages
-const townsLayer = L.geoJSON(towns, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
-        document.getElementById("title").innerHTML = feature.properties.name;
-        document.getElementById("population").innerHTML = 'Population: ',feature.properties.population;
-        document.getElementById("information").innerHTML = feature.properties.info;
-        document.getElementById("friends").innerHTML = 'Friends: ',feature.properties.friends;
-        document.getElementById("foes").innerHTML = 'Foes: ',feature.properties.foes;
-        });
-    },
-    // onEachFeature: onEachFeature,
-    maxZoom: 1
-});
 // const townsLayer = L.geoJSON(towns, {
 //     pointToLayer: function (feature, latlng) {
-//         switch (feature.properties.size) {
-//             case 'Fort':
-//                 return L.marker(latlng,{icon: fortIcon});
-//             case 'Village':
-//                 return L.circleMarker(latlng, geojsonMarkerOptions,feature);
-//         }
+//         return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
+//         document.getElementById("title").innerHTML = feature.properties.name;
+//         document.getElementById("population").innerHTML = 'Population: ',feature.properties.population;
+//         document.getElementById("information").innerHTML = feature.properties.info;
+//         document.getElementById("friends").innerHTML = 'Friends: ',feature.properties.friends;
+//         document.getElementById("foes").innerHTML = 'Foes: ',feature.properties.foes;
+//         });
 //     },
 //     // onEachFeature: onEachFeature,
 //     maxZoom: 1
 // });
+const townsLayer = L.geoJSON(towns, {
+    pointToLayer: function (feature, latlng) {
+        switch (feature.properties.size) {
+            case 'Fort':
+                return L.marker(latlng,{icon: fortIcon}).addTo(map);
+            case 'Village':
+                return L.circleMarker(latlng, geojsonMarkerOptions,feature).addTo(map);
+        }
+    },
+    // onEachFeature: onEachFeature,
+    maxZoom: 1
+});
 
 // show and hide items based on zoom level
 map.on('zoomend',function() {
