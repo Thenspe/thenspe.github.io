@@ -45,7 +45,7 @@ var factionAssets = {
             "type": "Feature",
             "properties": {
                 "name": "TBoE",
-                "colour": "red",
+                "colour": "red", //b5141c
                 "icon":"BoI"
             },
             "geometry": {
@@ -57,7 +57,7 @@ var factionAssets = {
             "type": "Feature",
             "properties": {
                 "name": "VidarLeague",
-                "colour": "blue",
+                "colour": "blue", //1437b5
                 "icon":"BoI"
             },
             "geometry": {
