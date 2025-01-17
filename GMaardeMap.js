@@ -1,4 +1,4 @@
-var updateNum = 80
+var updateNum = 81
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -39,7 +39,7 @@ console.log("Zoom = ",map.getZoom());
 // add the geojson
 
 var geojsonMarkerOptions = {
-    // radius: 6,
+    radius: 6,
     fillColor: "#000",
     color: "#000",
     weight: 1,
