@@ -28,6 +28,9 @@ var options = {
     },
 };
 L.control.ruler(options).addTo(map);
+document.getElementById("left").appendChild(
+    L.control.layers(ruler).onAdd(map)
+);
 
 console.log("Zoom = ",map.getZoom());
 
