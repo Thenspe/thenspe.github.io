@@ -1,4 +1,4 @@
-var updateNum = 76
+var updateNum = 77
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -55,7 +55,7 @@ function onEachFeature(feature, layer) {
     //checks each feature for the name of the town, and puts it in a popup?
     if (feature.properties && feature.properties.name) {
         layer.bindPopup(feature.properties.name);
-        // document.getElementById("title") = feature.properties.name;
+        document.getElementById("title").innerHTML = feature.properties.name;
         // document.getElementById("pop") = feature.properties.population;
         // document.getElementById("information") = feature.properties.info;
     }
