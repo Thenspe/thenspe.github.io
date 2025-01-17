@@ -1,4 +1,4 @@
-var updateNum = 98
+var updateNum = 99
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -56,7 +56,7 @@ const townsLayer = L.geoJSON(towns, {
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
-        });
+        })
     },
     // onEachFeature: onEachFeature,
     maxZoom: 1
