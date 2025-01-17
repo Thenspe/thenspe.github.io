@@ -1,4 +1,4 @@
-var updateNum = 81
+var updateNum = 82
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -59,7 +59,7 @@ function onEachFeature(feature, layer) {
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
-        return L.marker(latlng, geojsonMarkerOptions);
+        return L.circleMarker(latlng, geojsonMarkerOptions);
     },
     onEachFeature: onEachFeature,
     maxZoom: 1
