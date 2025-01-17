@@ -1,4 +1,4 @@
-var updateNum = 84
+var updateNum = 85
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -47,7 +47,7 @@ function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.name) {
         console.log("does it work here?")
         // layer.bindPopup(feature.properties.name);
-        // document.getElementById("title").innerHTML = feature.properties.name;
+        document.getElementById("title").innerHTML = feature.properties.name;
         // document.getElementById("pop") = feature.properties.population;
         // document.getElementById("information") = feature.properties.info;
     }
@@ -56,7 +56,7 @@ function onEachFeature(feature, layer) {
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, geojsonMarkerOptions);
+        return L.circleMarker(latlng, geojsonMarkerOptions,feature);
     },
     onEachFeature: onEachFeature,
     maxZoom: 1
