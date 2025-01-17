@@ -13,6 +13,13 @@ main {
     align-items: center;
     justify-content: center;
 }
+h2 {
+    margin-bottom: 2;
+    margin-top: 0;
+}
+p {
+    margin: 0;
+}
 #parchment {
     position: relative;
     /* background-image:url("images/Parchment.png"); */
