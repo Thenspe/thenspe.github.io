@@ -1,4 +1,4 @@
-var updateNum = 104
+var updateNum = 105
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -54,13 +54,13 @@ const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
         switch (feature.properties.size) {
             case 'Fort':
-                return L.marker(latlng,{icon: fortIcon})
+                return L.marker(latlng,{icon: fortIcon});
             default:
                 return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
                 document.getElementById("title").innerHTML = feature.properties.name;
                 document.getElementById("population").innerHTML = feature.properties.population;
                 document.getElementById("information").innerHTML = feature.properties.info;
-            })
+            });
         }
     },
     // onEachFeature: onEachFeature,
