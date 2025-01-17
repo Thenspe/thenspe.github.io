@@ -1,4 +1,4 @@
-var updateNum = 112
+var updateNum = 113
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -44,7 +44,7 @@ var geojsonMarkerOptions = {
 };
 //setup icons for use by the geojson layers
 var fortIcon = L.icon({
-    iconURL: "images/iconsFort.png",
+    iconURL: "/images/iconsFort.png",
     // iconSize: [115, 115],
     // iconAnchor: [50, 50],
 });
