@@ -1,4 +1,4 @@
-var updateNum = 93
+var updateNum = 94
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -45,7 +45,8 @@ var geojsonMarkerOptions = {
 //setup icons for use by the geojson layers
 var fortIcon = L.icon({
     iconURL: "images/iconsFort",
-    iconSize: [15,15]
+    iconSize: [115,115],
+    iconAnchor: [50,50],
 });
 
 // Add the towns and villages
@@ -62,7 +63,7 @@ const townsLayer = L.geoJSON(towns, {
 });
 
 townsLayer.eachLayer(function (feature) {
-    switch(feature.properties.type) {
+    switch(feature.properties.size) {
         case "Fort":
             setStyle
             break;          
