@@ -1,4 +1,4 @@
-var updateNum = 73
+var updateNum = 74
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -68,12 +68,12 @@ const townsLayer = L.geoJSON(towns, {
 });
 
 // show and hide items based on zoom level
-// map.on('zoomend',function() {
-//     var currentZoom = map.getZoom();
-//     if(currentZoom >= 1) {
-//         townsLayer.addTo(map);
-//     }
-//     else {
-//         townsLayer.remove();
-//     }
-// });
+map.on('zoomend',function() {
+    var currentZoom = map.getZoom();
+    if(currentZoom >= 1) {
+        townsLayer.addTo(map);
+    }
+    else {
+        townsLayer.remove();
+    }
+});
