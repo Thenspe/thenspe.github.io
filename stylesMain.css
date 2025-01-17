@@ -47,14 +47,14 @@ main {
     position: absolute;
     top: 38%;
     left: 83%;
-    width: 13%;
-    height: 32%;
+    width: 14%;
+    height: 35%;
     rotate: 13deg;
 }
 #left {
     background-color: yellow;
     position: absolute;
-    top: 29%;
+    top: 29.5%;
     left: 1.5%;
     width: 13%;
     height: 23%;
