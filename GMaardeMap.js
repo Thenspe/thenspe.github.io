@@ -1,4 +1,4 @@
-var updateNum = 91
+var updateNum = 92
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -60,20 +60,11 @@ var fortIcon = L.icon({
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
-        if(feature.properties.type = 'Fort') {
-            return L.marker(latlng,fortIcon,feature).on('click', function(e){
-                document.getElementById("title").innerHTML = feature.properties.name;
-                document.getElementById("population").innerHTML = feature.properties.population;
-                document.getElementById("information").innerHTML = feature.properties.info;
-            });
-        }
-        else {
-            return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
+        return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
         });
-    }
     },
     // onEachFeature: onEachFeature,
     maxZoom: 1
