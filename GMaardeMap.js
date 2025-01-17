@@ -39,6 +39,7 @@ function onMapClick(e) {
     console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum);
     // document.getElementById("ClickInfo").innerHTML = "You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum;
 };
+map.on('click', onMapClick);
 
 function onMapClick(e) {
     // console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum),
@@ -46,6 +47,7 @@ function onMapClick(e) {
     document.getElementById("ClickInfo").innerHTML = "You clicked on the map";
     
 };
+map.on('click', onMapClick);
 // add the geojson
 
 var geojsonMarkerOptions = {
