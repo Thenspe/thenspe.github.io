@@ -1,4 +1,4 @@
-var updateNum = 77
+var updateNum = 78
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -33,13 +33,8 @@ L.control.ruler(options).addTo(map);
 console.log("Zoom = ",map.getZoom());
 
 //click for coordinates
-var popup = L.popup();
+// var popup = L.popup();
 
-function onMapClick(e) {
-    console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum);
-    document.getElementById("ClickInfo").innerHTML = "You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum;
-};
-map.on('click', onMapClick);
 
 // add the geojson
 
@@ -50,15 +45,15 @@ var geojsonMarkerOptions = {
     weight: 1,
     opacity: 1,
 };
-function onEachFeature(feature, layer) {
-    //checks each feature for the name of the town, and puts it in a popup
-    if (feature.properties && feature.properties.name) {
-        layer.bindPopup(feature.properties.name);
-        // document.getElementById("title").innerHTML = feature.properties.name;
-        // document.getElementById("pop") = feature.properties.population;
-        // document.getElementById("information") = feature.properties.info;
-    }
-}
+// function onEachFeature(feature, layer) {
+//     //checks each feature for the name of the town, and puts it in a popup
+//     if (feature.properties && feature.properties.name) {
+//         layer.bindPopup(feature.properties.name);
+//         // document.getElementById("title").innerHTML = feature.properties.name;
+//         // document.getElementById("pop") = feature.properties.population;
+//         // document.getElementById("information") = feature.properties.info;
+//     }
+// }
 
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
@@ -79,3 +74,17 @@ map.on('zoomend',function() {
         townsLayer.remove();
     }
 });
+
+// Determine what happens when you click on the map
+
+//Display coordinates, zoom, and current update version
+function onMapClick(e) {
+    console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum);
+    document.getElementById("ClickInfo").innerHTML = "You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum;
+};
+map.on('click', onMapClick);
+
+//Check if an object was clicked on, and display info if true
+map.on('click', function(e) {
+    alert(e.latlng);
+} );
