@@ -1,4 +1,4 @@
-var updateNum = 94
+var updateNum = 95
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -58,7 +58,7 @@ const townsLayer = L.geoJSON(towns, {
             document.getElementById("information").innerHTML = feature.properties.info;
         });
     },
-    onEachFeature: onEachFeature,
+    // onEachFeature: onEachFeature,
     maxZoom: 1
 });
 
@@ -89,11 +89,3 @@ function onMapClick(e) {
     document.getElementById("ClickInfo").innerHTML = "You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum;
 };
 map.on('click', onMapClick);
-
-//Check if an object was clicked on, and display info if true
-townsLayer.on('click', function(e) {
-    console.log("it works when you click it");
-//     document.getElementById("title").innerHTML = feature.properties.name;
-//     document.getElementById("pop") = feature.properties.population;
-//     document.getElementById("information") = feature.properties.info;
-} );
