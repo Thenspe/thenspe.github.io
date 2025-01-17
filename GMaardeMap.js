@@ -1,4 +1,4 @@
-var updateNum = 67
+var updateNum = 68
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -38,7 +38,6 @@ var popup = L.popup();
 function onMapClick(e) {
     console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum);
     document.getElementById("ClickInfo").innerHTML = ("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum);
-
 };
 map.on('click', onMapClick);
 
@@ -69,12 +68,12 @@ const townsLayer = L.geoJSON(towns, {
 });
 
 // show and hide items based on zoom level
-map.on('zoomend',function() {
-    var currentZoom = map.getZoom();
-    if(currentZoom >= 1) {
-        townsLayer.addTo(map);
-    }
-    else {
-        townsLayer.remove();
-    }
-});
+// map.on('zoomend',function() {
+//     var currentZoom = map.getZoom();
+//     if(currentZoom >= 1) {
+//         townsLayer.addTo(map);
+//     }
+//     else {
+//         townsLayer.remove();
+//     }
+// });
