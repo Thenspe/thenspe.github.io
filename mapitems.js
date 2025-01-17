@@ -81,7 +81,7 @@ var factionAssets = {
             "type": "Feature",
             "properties": {
                 "name": "Kloshtaggen",
-                "colour": "purple", //
+                "colour": "purple", //b813c9
                 "icon":"BoI"
             },
             "geometry": {
@@ -93,7 +93,7 @@ var factionAssets = {
             "type": "Feature",
             "properties": {
                 "name": "Artefactors",
-                "colour": "pink", //d41e80
+                "colour": "pink", //e62d99
                 "icon":"BoI"
             },
             "geometry": {
@@ -101,5 +101,7 @@ var factionAssets = {
                 "coordinates": [585.963797,646.51301]
             }
         }
+        //green 199305
+        //orange f59b14
     ]
 };

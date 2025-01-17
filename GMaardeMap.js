@@ -1,4 +1,4 @@
-var updateNum = 71
+var updateNum = 72
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -28,7 +28,7 @@ var options = {
         label: 'Bearing:'
     },
 };
-// left.appendChild(L.control.ruler(options).addTo(map));
+left.appendChild(L.control.ruler(options).addTo(map));
 
 console.log("Zoom = ",map.getZoom());
 
