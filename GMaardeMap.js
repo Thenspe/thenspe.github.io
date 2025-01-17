@@ -1,4 +1,4 @@
-var updateNum = 103
+var updateNum = 104
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -54,7 +54,7 @@ const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
         switch (feature.properties.size) {
             case 'Fort':
-                return L.marker({icon: fortIcon})
+                return L.marker(latlng,{icon: fortIcon})
             default:
                 return L.circleMarker(latlng, geojsonMarkerOptions,feature).on('click', function(e){
                 document.getElementById("title").innerHTML = feature.properties.name;
@@ -66,15 +66,6 @@ const townsLayer = L.geoJSON(towns, {
     // onEachFeature: onEachFeature,
     maxZoom: 1
 });
-
-// set format of forts and cities
-// townsLayer.eachLayer(function (feature) {
-//     switch(feature.properties.size) {
-//         case "Fort":
-//             console.log("something happened");
-//             break;          
-//     }
-// });
 
 // show and hide items based on zoom level
 map.on('zoomend',function() {
