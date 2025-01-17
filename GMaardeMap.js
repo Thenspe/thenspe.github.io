@@ -1,4 +1,4 @@
-var updateNum = 56
+var updateNum = 57
 console.log("Update ",updateNum);
 
 var map = L.map('map', {
@@ -39,7 +39,7 @@ var popup = L.popup();
 
 function onMapClick(e) {
     console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum),
-    document.getElementById("ClickInfo").innerHTML = "You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum;
+    // document.getElementById("ClickInfo").innerHTML = "You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum;
 };
 // add the geojson
 
