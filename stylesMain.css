@@ -37,8 +37,8 @@ main {
     background-color: rgba(0,0,0,1);
     position: absolute;
     top: 39%;
-    left: 82%;
-    width: 13%;
+    left: 83%;
+    width: 15%;
     height: 35%;
     rotate: 13deg;
 }
@@ -46,8 +46,8 @@ main {
     background-color: yellow;
     position: absolute;
     top: 31%;
-    left: 0.5%;
-    width: 12%;
+    left: 1.5%;
+    width: 15%;
     height: 25%;
     rotate: -22deg;
 }

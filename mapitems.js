@@ -37,9 +37,7 @@ let towns = {
         }
     ]
 };
-// var roads = {};
 // var ruins = {};
-// var politicalBoundaries = {};
 var factionAssets = {
     "type": "FeatureCollection",
     "features": [
