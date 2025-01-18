@@ -1,4 +1,4 @@
-var updateNum = 136
+var updateNum = 137
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -83,12 +83,13 @@ var water = L.imageOverlay('images/layerWater.png',bounds).addTo(map);
 var biomes = L.imageOverlay('images/layerBiomes.png',bounds).addTo(map);
 var roads = L.imageOverlay('images/layerRoads.png',bounds).addTo(map);
 var peopleThings = L.layerGroup([roads,townsLayer]).addTo(map);
+var interestingThings = L.layer(interestLayer);
 
 var overlayMaps = {
     "Rivers and Lakes": water,
     "Biomes": biomes,
     "Roads and Cities": peopleThings,
-    "Points of Interest": interestLayer
+    "Points of Interest": interestingThings
 };
 // layer control
 var layerControl = L.control.layers(null,overlayMaps,{collapsed:false}).addTo(map);
