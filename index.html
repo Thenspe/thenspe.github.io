@@ -13,15 +13,23 @@
     <title>VanDam</title>
 </head>
 <body>
-<main>
-    <div id="parchment">
-        <img src="images/Parchment.png" alt="a scroll of parchment on a desk">
-        <div id="map"></div>
-        <div id="right"></div>
-        <div id="left"></div>
-    </div>
-</main>
+    <main>
+        <div id="parchment">
+            <img src="images/Parchment.png" alt="a scroll of parchment on a desk">
+            <div id="map"></div>
+            <div id="right">
+                <p id="information">Welcome to Aarde, a world of ancient technology and fearsome magic created by Stephen VanDam for the Worlds Without Number tabletop roleplaying game.</p>
+            </div>
+            <div id="left">
+                <h2 id="title">Aarde</h2>
+                <p id="population">Population: 1,130,000</p>
+                <p id="friends">Featuring Freya, Kerrick, Neil, Raze, and one who has not yet earned his name.</p>
+                <p id="foes"></p>
+            </div>
+        </div>
+    </main>
 </body>
+<script src="mapitems.js"></script>
 <script src="aardeMap.js"></script>
 <script>
     map.removeControl(map.zoomControl);

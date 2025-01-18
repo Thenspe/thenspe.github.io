@@ -159,7 +159,7 @@ let towns = {
         }
     ]
 };
-// var interest = {
+// let interest = {
 //     "type": "FeatureCollection",
 //     "features": [
 //         {"type": "Feature","properties": {"name": "Ancient Mine",
@@ -186,7 +186,7 @@ let towns = {
 //         }
 //     ]
 // };
-var factionAssets = {
+let factionAssets = {
     "type": "FeatureCollection",
     "features": [
         {
