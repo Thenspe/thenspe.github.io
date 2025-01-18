@@ -1,4 +1,4 @@
-var updateNum = 120
+var updateNum = 121
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -43,26 +43,29 @@ var geojsonMarkerOptions = {
     fillOpacity: 1,
 };
 //setup icons for use by the geojson layers
-var iconsVillage = L.icon({
-    iconURL: 'images/iconsVillage.png',
-    iconSize: [115, 115],
-    iconAnchor: [50, 50],
-});
-var iconFort = L.icon({
-    iconURL: 'images/iconsFort.png',
-    iconSize: [115, 115],
-    iconAnchor: [50, 50],
-});
+// var iconsVillage = L.icon({
+//     iconURL: 'images/iconsVillage.png',
+//     iconSize: [115, 115],
+//     iconAnchor: [50, 50],
+// });
+// var iconsFort = L.icon({
+//     iconURL: 'images/iconsFort.png',
+//     iconSize: [115, 115],
+//     iconAnchor: [50, 50],
+// });
 
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
-        return L.marker(latlng, {icon: feature.properties.displayIcon},feature).on('click', function(e){
-        document.getElementById("title").innerHTML = feature.properties.name;
-        document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
-        document.getElementById("information").innerHTML = feature.properties.info;
-        document.getElementById("friends").innerHTML = 'Friends: '+feature.properties.friends;
-        document.getElementById("foes").innerHTML = 'Foes: '+feature.properties.foes;
+        var smallIcon = L.icon({
+            iconURL: 'images/' + feature.properties.displayIcon + '.png'
+        });
+        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
+            document.getElementById("title").innerHTML = feature.properties.name;
+            document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
+            document.getElementById("information").innerHTML = feature.properties.info;
+            document.getElementById("friends").innerHTML = 'Friends: '+feature.properties.friends;
+            document.getElementById("foes").innerHTML = 'Foes: '+feature.properties.foes;
         });
     },
     // onEachFeature: onEachFeature,
