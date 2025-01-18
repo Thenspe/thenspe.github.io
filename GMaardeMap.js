@@ -1,4 +1,4 @@
-var updateNum = 135
+var updateNum = 136
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -11,21 +11,6 @@ var map = L.map('map', {
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/layerTerrain.png',bounds).addTo(map);
 map.setView([735,600], 1.5);
-
-//map layers
-var terrain = L.imageOverlay('images/layerTerrain.png',bounds);
-var water = L.imageOverlay('images/layerWater.png',bounds);
-var biomes = L.imageOverlay('images/layerBiomes.png',bounds);
-var roads = L.imageOverlay('images/layerRoads.png',bounds);
-
-var overlayMaps = {
-    "Rivers and Lakes": water,
-    "Biomes": biomes,
-    "Roads and Cities": roads
-};
-// layer control
-var layerControl = L.control.layers(null,overlayMaps).addTo(map);
-layerControl.expand();
 
 //Measurement tool
 var options = {
@@ -92,21 +77,23 @@ const interestLayer = L.geoJSON(interest, {
     maxZoom: 1
 });
 
-// show and hide items based on zoom level
-map.on('zoomend',function() {
-    var currentZoom = map.getZoom();
-    if(currentZoom >= 1) {
-        townsLayer.addTo(map);
-        interestLayer.addTo(map);
-    }
-    else {
-        townsLayer.remove();
-        interestLayer.addTo(map);
-    }
-});
+//map layers and controls
+var terrain = L.imageOverlay('images/layerTerrain.png',bounds);
+var water = L.imageOverlay('images/layerWater.png',bounds).addTo(map);
+var biomes = L.imageOverlay('images/layerBiomes.png',bounds).addTo(map);
+var roads = L.imageOverlay('images/layerRoads.png',bounds).addTo(map);
+var peopleThings = L.layerGroup([roads,townsLayer]).addTo(map);
+
+var overlayMaps = {
+    "Rivers and Lakes": water,
+    "Biomes": biomes,
+    "Roads and Cities": peopleThings,
+    "Points of Interest": interestLayer
+};
+// layer control
+var layerControl = L.control.layers(null,overlayMaps,{collapsed:false}).addTo(map);
 
 // Determine what happens when you click on the map
-
 //Display coordinates, zoom, and current update version
 function onMapClick(e) {
     console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum);
