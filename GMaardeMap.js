@@ -1,4 +1,4 @@
-var updateNum = 129
+var updateNum = 130
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -58,7 +58,7 @@ var geojsonMarkerOptions = {
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
         var smallIcon = L.icon({
-            iconURL: 'images/' + feature.properties.displayIcon + '.png'
+            iconUrl: 'images/' + feature.properties.displayIcon + '.png'
         });
         return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
@@ -71,18 +71,6 @@ const townsLayer = L.geoJSON(towns, {
     // onEachFeature: onEachFeature,
     maxZoom: 1
 });
-// const townsLayer = L.geoJSON(towns, {
-//     pointToLayer: function (feature, latlng) {
-//         switch (feature.properties.size) {
-//             case 'Fort':
-//                 return L.marker(latlng,{icon: fortIcon});
-//             case 'Village':
-//                 return L.circleMarker(latlng, geojsonMarkerOptions,feature);
-//         }
-//     },
-//     // onEachFeature: onEachFeature,
-//     maxZoom: 1
-// });
 
 // show and hide items based on zoom level
 map.on('zoomend',function() {
