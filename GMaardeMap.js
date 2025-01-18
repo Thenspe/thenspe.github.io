@@ -60,7 +60,7 @@ const townsLayer = L.geoJSON(towns, {
         // var smallIcon = L.icon({
         //     // iconURL: 'images/' + feature.properties.displayIcon + '.png'
         // });
-        return L.marker(latlng, /*{icon: smallIcon},*/ feature).on('click', function(e){
+        return L.circleMarker(latlng,geojsonMarkerOptions, /*{icon: smallIcon},*/ feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
