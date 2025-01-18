@@ -1,4 +1,4 @@
-var updateNum = 131
+var updateNum = 132
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -34,40 +34,43 @@ console.log("Zoom = ",map.getZoom());
 
 // add the geojson
 
-var geojsonMarkerOptions = {
-    radius: 6,
-    fillColor: "#000",
-    color: "#000",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 1,
-};
-//setup icons for use by the geojson layers
-// var iconsVillage = L.icon({
-//     iconURL: 'images/iconsVillage.png',
-//     iconSize: [115, 115],
-//     iconAnchor: [50, 50],
-// });
-// var iconsFort = L.icon({
-//     iconURL: 'images/iconsFort.png',
-//     iconSize: [115, 115],
-//     iconAnchor: [50, 50],
-// });
-
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
+        // set up the icons, referencing the geojson data for marker specifics
         var smallIcon = L.icon({
             iconUrl: 'images/' + feature.properties.displayIcon + '.png',
             iconSize: [20,20],
             iconAnchor: [10,10]
         });
+        // attaches the correct icon and display data to each marker
         return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
-            document.getElementById("friends").innerHTML = 'Friends: '+feature.properties.friends;
-            document.getElementById("foes").innerHTML = 'Foes: '+feature.properties.foes;
+            document.getElementById("good").innerHTML = 'Friends: '+feature.properties.friends;
+            document.getElementById("bad").innerHTML = 'Foes: '+feature.properties.foes;
+        });
+    },
+    // onEachFeature: onEachFeature,
+    maxZoom: 1
+});
+// Add the points of interest
+const interestLayer = L.geoJSON(interest, {
+    pointToLayer: function (feature, latlng) {
+        // set up the icons, referencing the geojson data for marker specifics
+        var smallIcon = L.icon({
+            iconUrl: 'images/' + feature.properties.displayIcon + '.png',
+            iconSize: [20,20],
+            iconAnchor: [10,10]
+        });
+        // attaches the correct icon and display data to each marker
+        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
+            document.getElementById("title").innerHTML = feature.properties.name;
+            document.getElementById("population").innerHTML = '';
+            document.getElementById("information").innerHTML = feature.properties.info;
+            document.getElementById("good").innerHTML = 'Discoveries: '+feature.properties.discoveries;
+            document.getElementById("bad").innerHTML = 'Dangers: '+feature.properties.dangers;
         });
     },
     // onEachFeature: onEachFeature,
