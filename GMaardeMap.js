@@ -1,4 +1,4 @@
-var updateNum = 124
+var updateNum = 125
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -57,15 +57,15 @@ var geojsonMarkerOptions = {
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
-        var smallIcon = L.icon({
-            // iconURL: 'images/' + feature.properties.displayIcon + '.png'
-        });
+        // var smallIcon = L.icon({
+        //     // iconURL: 'images/' + feature.properties.displayIcon + '.png'
+        // });
         return L.marker(latlng, /*{icon: smallIcon},*/ feature).on('click', function(e){
-            // document.getElementById("title").innerHTML = feature.properties.name;
-            // document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
-            // document.getElementById("information").innerHTML = feature.properties.info;
-            // document.getElementById("friends").innerHTML = 'Friends: '+feature.properties.friends;
-            // document.getElementById("foes").innerHTML = 'Foes: '+feature.properties.foes;
+            document.getElementById("title").innerHTML = feature.properties.name;
+            document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
+            document.getElementById("information").innerHTML = feature.properties.info;
+            document.getElementById("friends").innerHTML = 'Friends: '+feature.properties.friends;
+            document.getElementById("foes").innerHTML = 'Foes: '+feature.properties.foes;
         });
     },
     // onEachFeature: onEachFeature,

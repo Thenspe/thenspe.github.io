@@ -2,7 +2,7 @@ let towns = {
     "type": "FeatureCollection",
     "features": [
         {"type": "Feature","properties": {"name": "Yarth",
-                // "displayIcon": "iconsVillage",
+                "displayIcon": "iconsVillage",
                 "population": "1500",
                 "info": "Yarth is a small village at the edge of the Ruggengrat Mountains. Part of the kingdom of Danuthan, it boasts a few farms and some mining activity in the foothills.\nRecently the True Blood of Earth has sent a representative, Mehael, to try and proselytise their human-first messsage in the area.\nNeil has a contact here, and the local smith is a quiet but friendly fellow.",
                 "friends": "Neil's contact, village smith",
@@ -14,7 +14,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "South Ablein",
-                // "displayIcon": "iconsVillage",
+                "displayIcon": "iconsVillage",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -26,7 +26,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "North Ablein",
-                // "displayIcon": "iconsVillage",
+                "displayIcon": "iconsVillage",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -38,7 +38,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Fort Kairth",
-                // "displayIcon": "iconsFort",
+                "displayIcon": "iconsFort",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -50,7 +50,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Fort Grystol",
-                // "displayIcon": "iconsFort",
+                "displayIcon": "iconsFort",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -62,7 +62,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Uruttal",
-                // "displayIcon": "iconsVillage",
+                "displayIcon": "iconsVillage",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -74,7 +74,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Atchison",
-                // "displayIcon": "iconsAtchison",
+                "displayIcon": "iconsAtchison",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -86,7 +86,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Neimul",
-                // "displayIcon": "iconsVillage",
+                "displayIcon": "iconsVillage",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -98,7 +98,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Erskill",
-                // "displayIcon": "iconsVillage",
+                "displayIcon": "iconsVillage",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -110,7 +110,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Ruestig's Keep",
-                // "displayIcon": "iconsFort",
+                "displayIcon": "iconsFort",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -122,7 +122,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Swiftbend Fort",
-                // "displayIcon": "iconsFort",
+                "displayIcon": "iconsFort",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -134,7 +134,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Lerstwial",
-                // "displayIcon": "iconsVillage",
+                "displayIcon": "iconsVillage",
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
@@ -146,7 +146,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "blank",
-                // "displayIcon": "iconsVillage", // iconsVillage, iconsFort
+                "displayIcon": "iconsVillage", // iconsVillage, iconsFort
                 "population": "unknown",
                 "info": "unexplored",
                 "friends":"Haven't made any yet.",
