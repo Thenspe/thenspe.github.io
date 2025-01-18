@@ -159,33 +159,33 @@ let towns = {
         }
     ]
 };
-var interest = {
-    "type": "FeatureCollection",
-    "features": [
-        {"type": "Feature","properties": {"name": "Ancient Mine",
-            "displayIcon": "iconsMine",
-            "info": "A landslide uncovered an ancient mine a half day from Yarth. Our adventurers were the first to enter it, based off a tip from one of Neil's informants. ",
-            "discoveries":"Valuable ores, ancient salvage, ancient equipment, medical texts.",
-            "dangers":"Deep Moles, cave-ins."
-            },
-            "geometry": {
-                "type":"Point",
-                "coordinates": [623.664273,744.19767]
-            }
-        },
-        {"type": "Feature","properties": {"name": "blank",
-            "displayIcon": "iconsMine", //iconsMine, iconsOutsiderBase, iconsRuins
-            "info": "unexplored",
-            "discoveries":"Haven't made any yet.",
-            "dangers":"Scarycave."
-            },
-            "geometry": {
-                "type":"Point",
-                "coordinates": [1,1]
-            }
-        }
-    ]
-};
+// var interest = {
+//     "type": "FeatureCollection",
+//     "features": [
+//         {"type": "Feature","properties": {"name": "Ancient Mine",
+//             "displayIcon": "iconsMine",
+//             "info": "A landslide uncovered an ancient mine a half day from Yarth. Our adventurers were the first to enter it, based off a tip from one of Neil's informants. ",
+//             "discoveries":"Valuable ores, ancient salvage, ancient equipment, medical texts.",
+//             "dangers":"Deep Moles, cave-ins."
+//             },
+//             "geometry": {
+//                 "type":"Point",
+//                 "coordinates": [623.664273,744.19767]
+//             }
+//         },
+//         {"type": "Feature","properties": {"name": "blank",
+//             "displayIcon": "iconsMine", //iconsMine, iconsOutsiderBase, iconsRuins
+//             "info": "unexplored",
+//             "discoveries":"Haven't made any yet.",
+//             "dangers":"Scarycave."
+//             },
+//             "geometry": {
+//                 "type":"Point",
+//                 "coordinates": [1,1]
+//             }
+//         }
+//     ]
+// };
 var factionAssets = {
     "type": "FeatureCollection",
     "features": [
