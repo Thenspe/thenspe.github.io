@@ -1,4 +1,4 @@
-var updateNum = 134
+var updateNum = 135
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -24,7 +24,9 @@ var overlayMaps = {
     "Roads and Cities": roads
 };
 // layer control
-var layerControl = L.control.layers(overlayMaps).addTo(map);
+var layerControl = L.control.layers(null,overlayMaps).addTo(map);
+layerControl.expand();
+
 //Measurement tool
 var options = {
     position: 'topleft',
