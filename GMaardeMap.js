@@ -1,4 +1,4 @@
-var updateNum = 128
+var updateNum = 129
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -60,7 +60,7 @@ const townsLayer = L.geoJSON(towns, {
         var smallIcon = L.icon({
             iconURL: 'images/' + feature.properties.displayIcon + '.png'
         });
-        return L.circleMarker(latlng, {icon: smallIcon}, feature).on('click', function(e){
+        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
