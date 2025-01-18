@@ -1,4 +1,4 @@
-var updateNum = 138
+var updateNum = 139
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -74,7 +74,7 @@ const interestLayer = L.geoJSON(interest, {
         });
     },
     // onEachFeature: onEachFeature,
-    maxZoom: 1
+    maxZoom: 3.5
 });
 
 //map layers and controls
