@@ -1,4 +1,4 @@
-var updateNum = 141
+var updateNum = 142
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -81,7 +81,7 @@ const interestLayer = L.geoJSON(interest, {
 var terrain = L.imageOverlay('images/layerTerrain.png',bounds).addTo(map);
 var water = L.imageOverlay('images/layerWater.png',bounds).addTo(map);
 var biomes = L.imageOverlay('images/layerBiomes.png',bounds).addTo(map);
-var roads = L.imageOverlay('images/layerRoads.png',bounds).addTo(map);
+var roads = L.imageOverlay('images/layerRoads.png',bounds);
 var peopleThings = L.layerGroup([roads,townsLayer]);
 var overlayMaps = {
     "Terrain": terrain,
