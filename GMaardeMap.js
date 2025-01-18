@@ -1,4 +1,4 @@
-var updateNum = 127
+var updateNum = 128
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -57,10 +57,10 @@ var geojsonMarkerOptions = {
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
-        // var smallIcon = L.icon({
-        //     // iconURL: 'images/' + feature.properties.displayIcon + '.png'
-        // });
-        return L.circleMarker(latlng,geojsonMarkerOptions, /*{icon: smallIcon},*/ feature).on('click', function(e){
+        var smallIcon = L.icon({
+            iconURL: 'images/' + feature.properties.displayIcon + '.png'
+        });
+        return L.circleMarker(latlng, {icon: smallIcon}, feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;

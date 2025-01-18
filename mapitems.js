@@ -145,6 +145,18 @@ let towns = {
                 "coordinates": [764.018342,759.356429]
             }
         },
+        {"type": "Feature","properties": {"name": "Hupbleh",
+                "displayIcon": "iconsVillage", // iconsVillage, iconsFort
+                "population": "unknown",
+                "info": "unexplored",
+                "friends":"Haven't made any yet.",
+                "foes":"Haven't made any yet."
+            },
+            "geometry": {
+                "type":"Point",
+                "coordinates": [680.570243,696.761771]
+            }
+        },
         {"type": "Feature","properties": {"name": "blank",
                 "displayIcon": "iconsVillage", // iconsVillage, iconsFort
                 "population": "unknown",
