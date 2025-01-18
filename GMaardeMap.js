@@ -1,4 +1,4 @@
-var updateNum = 123
+var updateNum = 124
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -61,11 +61,11 @@ const townsLayer = L.geoJSON(towns, {
             // iconURL: 'images/' + feature.properties.displayIcon + '.png'
         });
         return L.marker(latlng, /*{icon: smallIcon},*/ feature).on('click', function(e){
-            document.getElementById("title").innerHTML = feature.properties.name;
-            document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
-            document.getElementById("information").innerHTML = feature.properties.info;
-            document.getElementById("friends").innerHTML = 'Friends: '+feature.properties.friends;
-            document.getElementById("foes").innerHTML = 'Foes: '+feature.properties.foes;
+            // document.getElementById("title").innerHTML = feature.properties.name;
+            // document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
+            // document.getElementById("information").innerHTML = feature.properties.info;
+            // document.getElementById("friends").innerHTML = 'Friends: '+feature.properties.friends;
+            // document.getElementById("foes").innerHTML = 'Foes: '+feature.properties.foes;
         });
     },
     // onEachFeature: onEachFeature,
