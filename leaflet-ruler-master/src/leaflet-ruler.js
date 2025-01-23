@@ -160,7 +160,7 @@
       var a = Math.sin(deltaF/2) * Math.sin(deltaF/2) + Math.cos(f1*toRadian) * Math.cos(f2*toRadian) * Math.sin(deltaL/2) * Math.sin(deltaL/2);
       var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
       // var c = map.distance(this._clickedLatLong,this._movingLatLong);
-      // var distance = R * c;
+      var distance = R * c;
       this._result = {
         Bearing: brng,
         Distance: distance
