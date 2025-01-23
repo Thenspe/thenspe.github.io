@@ -185,6 +185,17 @@ let interest = {
                 "coordinates": [623.664273,744.19767]
             }
         },
+        {"type": "Feature","properties": {"name": "Feylan's Keep",
+            "displayIcon": "iconsRuins", //iconsMine, iconsOutsiderBase, iconsRuins
+            "info": "One-time home of the healer Zuthoeng, and a frontier defence for the kingdom of Danuthan before the keep was destroyed in the early 1100's.",
+            "discoveries":"Haven't made any yet.",
+            "dangers":"Who knows..."
+            },
+            "geometry": {
+                "type":"Point",
+                "coordinates": [1,1]
+            }
+        },
         {"type": "Feature","properties": {"name": "blank",
             "displayIcon": "iconsMine", //iconsMine, iconsOutsiderBase, iconsRuins
             "info": "unexplored",
