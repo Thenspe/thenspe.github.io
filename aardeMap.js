@@ -1,4 +1,4 @@
-var updateNum = 154
+var updateNum = 155
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -17,7 +17,7 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'km',
-        factor: 0.01, //set to 0.007 for km
+        factor: 0.011, //set to 0.007 for km
         decimal: 1,
         label: 'Distance:'
     },
@@ -124,12 +124,12 @@ map.on('click', onMapClick);
 map.on('zoomend',function() {
     var currentZoom = map.getZoom();
     if(currentZoom >= 1) {
-        townsLayer.addTo(map);
+        peopleThings.addTo(map);
         citiesLayer.addTo(map);
         interestLayer.addTo(map);
     }
     else {
-        townsLayer.remove();
+        peopleThings.remove();
         citiesLayer.remove();
         interestLayer.remove();
     }
