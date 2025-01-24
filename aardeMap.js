@@ -102,7 +102,7 @@ var terrain = L.imageOverlay('images/layerTerrain.png',bounds).addTo(map);
 var water = L.imageOverlay('images/layerWater.png',bounds).addTo(map);
 var biomes = L.imageOverlay('images/layerBiomes.png',bounds).addTo(map);
 var roads = L.imageOverlay('images/layerRoads.png',bounds);
-var peopleThings = L.layerGroup([roads,townsLayer]);
+var peopleThings = L.layerGroup([roads,townsLayer,citiesLayer]);
 var overlayMaps = {
     "Terrain": terrain,
     "Rivers and Lakes": water,

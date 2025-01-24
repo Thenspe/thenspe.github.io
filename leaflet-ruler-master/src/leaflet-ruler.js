@@ -186,10 +186,10 @@
       }
       // distance
       var R = this.options.lengthUnit.factor ? 6371 * this.options.lengthUnit.factor : 6371; // kilometres
-      var deltaF = (f2 - f1)*toRadian;
-      var deltaL = (l2 - l1)*toRadian;
-      var a = Math.sin(deltaF/2) * Math.sin(deltaF/2) + Math.cos(f1*toRadian) * Math.cos(f2*toRadian) * Math.sin(deltaL/2) * Math.sin(deltaL/2);
-      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      var deltaF = (f2 - f1)*(f2 - f1);
+      var deltaL = (l2 - l1)*(l2 - l1);
+      var a = deltaF+deltaL
+      var c = Math.sqrt(a);
       var distance = R * c;
       this._result = {
         Bearing: dir,
