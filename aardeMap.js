@@ -1,4 +1,4 @@
-var updateNum = 156
+var updateNum = 157
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -17,7 +17,7 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'km',
-        factor: 0.011, //set to 0.007 for km
+        factor: 0.007, //set to 0.007 for km
         decimal: 1,
         label: 'Distance:'
     },
