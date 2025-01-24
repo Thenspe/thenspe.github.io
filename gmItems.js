@@ -6,11 +6,11 @@ let factionAssets = {
             "properties": {
                 "name": "TBoE",
                 "colour": "red", //b5141c
-                "icon":"BoI"
+                "displayIcon":"BoI"
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [518.057152,716.756712]
+                "coordinates": [691.643362,719.704373]
             }
         },
         {
@@ -18,11 +18,11 @@ let factionAssets = {
             "properties": {
                 "name": "VidarLeague",
                 "colour": "blue", //1437b5
-                "icon":"BoI"
+                "displayIcon":"BoI"
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [585.963797,646.51301]
+                "coordinates": [641.593131,700.954989]
             }
         },
         {
@@ -30,11 +30,11 @@ let factionAssets = {
             "properties": {
                 "name": "Mercenaries",
                 "colour": "yellow", //dbd00e
-                "icon":"BoI"
+                "displayIcon":"BoI"
             },
             "geometry": {
-                "type":"Kloshtaggen",
-                "coordinates": [585.963797,646.51301]
+                "type":"Point",
+                "coordinates": [784.657135,695.546322]
             }
         },
         {
@@ -42,11 +42,11 @@ let factionAssets = {
             "properties": {
                 "name": "Kloshtaggen",
                 "colour": "purple", //b813c9
-                "icon":"BoI"
+                "displayIcon":"BoI"
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [585.963797,646.51301]
+                "coordinates": [631.961056,846.75837]
             }
         },
         {
@@ -54,11 +54,11 @@ let factionAssets = {
             "properties": {
                 "name": "Artefactors",
                 "colour": "pink", //e62d99
-                "icon":"BoI"
+                "displayIcon":"BoI"
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [585.963797,646.51301]
+                "coordinates": [752.689212,723.781422]
             }
         }
         //green 199305
