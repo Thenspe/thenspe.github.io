@@ -1,4 +1,4 @@
-var updateNum = 145
+var updateNum = 146
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -16,8 +16,8 @@ map.setView([735,600], 1.5);
 var options = {
     position: 'topleft',
     lengthUnit: {
-        display: 'days',
-        factor: 0.01, //set to 0.007 for km
+        display: 'km',
+        factor: 0.000001, //set to 0.007 for km
         decimal: 1,
         label: 'Distance:'
     },
