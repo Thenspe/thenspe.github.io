@@ -73,18 +73,6 @@ let towns = {
                 "coordinates": [730.259913,690.502327]
             }
         },
-        {"type": "Feature","properties": {"name": "Atchison",
-                "displayIcon": "iconsAtchison",
-                "population": "unknown",
-                "info": "unexplored",
-                "friends":"Haven't made any yet.",
-                "foes":"Haven't made any yet."
-            },
-            "geometry": {
-                "type":"Point",
-                "coordinates": [718.882071,749.859311]
-            }
-        },
         {"type": "Feature","properties": {"name": "Neimul",
                 "displayIcon": "iconsVillage",
                 "population": "unknown",
@@ -167,6 +155,23 @@ let towns = {
             "geometry": {
                 "type":"Point",
                 "coordinates": [1,1]
+            }
+        }
+    ]
+};
+let cities = {
+    "type": "FeatureCollection",
+    "features": [
+        {"type": "Feature","properties": {"name": "Atchison",
+        "displayIcon": "iconsAtchison",
+        "population": "unknown",
+        "info": "unexplored",
+        "friends":"Haven't made any yet.",
+        "foes":"Haven't made any yet."
+            },
+            "geometry": {
+                "type":"Point",
+                "coordinates": [718.882071,749.859311]
             }
         }
     ]

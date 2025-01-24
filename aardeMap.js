@@ -1,4 +1,4 @@
-var updateNum = 151
+var updateNum = 152
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -42,6 +42,26 @@ const townsLayer = L.geoJSON(towns, {
             iconUrl: 'images/' + feature.properties.displayIcon + '.png',
             iconSize: [20,20],
             iconAnchor: [10,10]
+        });
+        // attaches the correct icon and display data to each marker
+        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
+            document.getElementById("title").innerHTML = feature.properties.name;
+            document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
+            document.getElementById("information").innerHTML = feature.properties.info;
+            document.getElementById("good").innerHTML = 'Friends: '+feature.properties.friends;
+            document.getElementById("bad").innerHTML = 'Foes: '+feature.properties.foes;
+        });
+    },
+    // onEachFeature: onEachFeature,
+    maxZoom: 1
+});
+const citiesLayer = L.geoJSON(cities, {
+    pointToLayer: function (feature, latlng) {
+        // set up the icons, referencing the geojson data for marker specifics
+        var smallIcon = L.icon({
+            iconUrl: 'images/' + feature.properties.displayIcon + '.png',
+            iconSize: [100,100],
+            iconAnchor: [50,50]
         });
         // attaches the correct icon and display data to each marker
         return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
