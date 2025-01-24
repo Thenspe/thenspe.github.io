@@ -1,4 +1,4 @@
-var updateNum = 153
+var updateNum = 154
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -119,3 +119,18 @@ function onMapClick(e) {
     console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum);
 };
 map.on('click', onMapClick);
+
+// show and hide items based on zoom level
+map.on('zoomend',function() {
+    var currentZoom = map.getZoom();
+    if(currentZoom >= 1) {
+        townsLayer.addTo(map);
+        citiesLayer.addTo(map);
+        interestLayer.addTo(map);
+    }
+    else {
+        townsLayer.remove();
+        citiesLayer.remove();
+        interestLayer.remove();
+    }
+});
