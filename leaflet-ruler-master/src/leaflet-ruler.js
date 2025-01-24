@@ -153,16 +153,34 @@
       var x = Math.cos(f1*toRadian)*Math.sin(f2*toRadian) - Math.sin(f1*toRadian)*Math.cos(f2*toRadian)*Math.cos((l2-l1)*toRadian);
       var brng = Math.atan2(y, x)*((this.options.angleUnit.factor ? this.options.angleUnit.factor/2 : 180)/Math.PI);
       brng += brng < 0 ? (this.options.angleUnit.factor ? this.options.angleUnit.factor : 360) : 0;
+  //I added this bit
+      var dir = "broken";
+      switch (true) {
+        case (brng < 45):
+          dir = "N";
+          break;
+        case (brng < 135):
+          dir = "E";
+          break;
+        case (brng < 225):
+          dir = "S";
+          break;
+        case (brng < 315):
+          dir = "W";
+          break;
+        case (brng < 360):
+          dir = "N";
+          break;
+      }
       // distance
       var R = this.options.lengthUnit.factor ? 6371 * this.options.lengthUnit.factor : 6371; // kilometres
       var deltaF = (f2 - f1)*toRadian;
       var deltaL = (l2 - l1)*toRadian;
       var a = Math.sin(deltaF/2) * Math.sin(deltaF/2) + Math.cos(f1*toRadian) * Math.cos(f2*toRadian) * Math.sin(deltaL/2) * Math.sin(deltaL/2);
       var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-      // var c = map.distance(this._clickedLatLong,this._movingLatLong);
       var distance = R * c;
       this._result = {
-        Bearing: brng,
+        Bearing: dir,
         Distance: distance
       };
     },

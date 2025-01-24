@@ -1,4 +1,4 @@
-var updateNum = 147
+var updateNum = 148
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -17,7 +17,7 @@ var options = {
     position: 'topleft',
     lengthUnit: {
         display: 'km',
-        factor: 0.00001, //set to 0.007 for km
+        factor: 0.007, //set to 0.007 for km
         decimal: 1,
         label: 'Distance:'
     },
@@ -61,8 +61,8 @@ const interestLayer = L.geoJSON(interest, {
         // set up the icons, referencing the geojson data for marker specifics
         var smallIcon = L.icon({
             iconUrl: 'images/' + feature.properties.displayIcon + '.png',
-            iconSize: [20,20],
-            iconAnchor: [10,10]
+            iconSize: [40,40],
+            iconAnchor: [20,20]
         });
         // attaches the correct icon and display data to each marker
         return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
