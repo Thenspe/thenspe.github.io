@@ -1,4 +1,4 @@
-var updateNum = 172
+var updateNum = 173
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -45,7 +45,7 @@ const townsLayer = L.geoJSON(towns, {
         } else if (feature.properties.displayIcon == "iconsCity") {
             sizeOfIcon = [50,50];
             anchorOfIcon = [25,25];
-            setOpacity = 0.1;
+            setOpacity = 0.5;
         }
         var smallIcon = L.icon({
             iconUrl: 'images/' + feature.properties.displayIcon + '.png',
