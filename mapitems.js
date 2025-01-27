@@ -158,7 +158,7 @@ let towns = {
             }
         },
         {"type": "Feature","properties": {"name": "Atchison",
-            "displayIcon": "iconsAtchison",
+            "displayIcon": "iconsCity",
             "population": "21, 000",
             "info": "Sometimes called the City of the Thousand Arches, Atchison is the capital city of the Kingdom of Danuthan.",
             "friends":"Haven't made any yet.",
