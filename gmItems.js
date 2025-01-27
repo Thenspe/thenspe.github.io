@@ -4,9 +4,10 @@ let factionAssets = {
         {
             "type": "Feature",
             "properties": {
-                "name": "TBoE",
-                "colour": "red", //b5141c
-                "displayIcon":"BoI"
+                "faction": "TBoE",
+                "assetName":"HomeBase",
+                "colour": "Red", //b5141c
+                "displayIcon":"flag"
             },
             "geometry": {
                 "type":"Point",
@@ -16,9 +17,10 @@ let factionAssets = {
         {
             "type": "Feature",
             "properties": {
-                "name": "VidarLeague",
-                "colour": "blue", //1437b5
-                "displayIcon":"BoI"
+                "faction": "VidarLeague",
+                "assetName":"HomeBase",
+                "colour": "Blue", //1437b5
+                "displayIcon":"flag"
             },
             "geometry": {
                 "type":"Point",
@@ -28,9 +30,10 @@ let factionAssets = {
         {
             "type": "Feature",
             "properties": {
-                "name": "Mercenaries",
-                "colour": "yellow", //dbd00e
-                "displayIcon":"BoI"
+                "faction": "Mercenaries",
+                "assetName":"HomeBase",
+                "colour": "Yellow", //dbd00e
+                "displayIcon":"flag"
             },
             "geometry": {
                 "type":"Point",
@@ -40,9 +43,10 @@ let factionAssets = {
         {
             "type": "Feature",
             "properties": {
-                "name": "Kloshtaggen",
-                "colour": "purple", //b813c9
-                "displayIcon":"BoI"
+                "faction": "Kloshtaggen",
+                "assetName":"HomeBase",
+                "colour": "Purple", //b813c9
+                "displayIcon":"flag"
             },
             "geometry": {
                 "type":"Point",
@@ -52,9 +56,10 @@ let factionAssets = {
         {
             "type": "Feature",
             "properties": {
-                "name": "Artefactors",
-                "colour": "pink", //e62d99
-                "displayIcon":"BoI"
+                "faction": "Artefactors",
+                "assetName":"HomeBase",
+                "colour": "Pink", //e62d99
+                "displayIcon":"flag"
             },
             "geometry": {
                 "type":"Point",
