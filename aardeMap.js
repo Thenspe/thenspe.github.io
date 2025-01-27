@@ -1,4 +1,4 @@
-var updateNum = 166
+var updateNum = 167
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -123,10 +123,25 @@ map.on('click', onMapClick);
 // show and hide items based on zoom level
 map.on('zoomend',function() {
     var currentZoom = map.getZoom();
-    if(currentZoom >= 1) {
-        peopleThings.addTo(map);
-        citiesLayer.addTo(map);
-        interestLayer.addTo(map);
+    if (currentZoom >= 1) {
+        if (map.hasLayer(peopleThings)) {
+            peopleThings.addTo(map);
+
+            if (map.hasLayer(interestLayer)) {
+                interestLayer.addTo(map);
+                console.log("Cities and interests are both selected.")
+            }
+            else {
+                console.log("Cities is selected, but not interests.")
+            }
+        }
+        else if (map.hasLayer(interestLayer)) {
+            interestLayer.addTo(map);
+            console.log("Interests is selected, but not cities.")
+        }
+        else {
+            console.log("Cities and interests are not selected.")
+        }
     }
     else {
         peopleThings.remove();
