@@ -54,6 +54,7 @@ p {
 #left {
     /* background-color: yellow; */
     position: absolute;
+    overflow-y:auto;
     top: 32%;
     left: 2%;
     width: 12%;

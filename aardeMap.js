@@ -1,4 +1,4 @@
-var updateNum = 173
+var updateNum = 174
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -45,7 +45,6 @@ const townsLayer = L.geoJSON(towns, {
         } else if (feature.properties.displayIcon == "iconsCity") {
             sizeOfIcon = [50,50];
             anchorOfIcon = [25,25];
-            setOpacity = 0.5;
         }
         var smallIcon = L.icon({
             iconUrl: 'images/' + feature.properties.displayIcon + '.png',
@@ -53,7 +52,7 @@ const townsLayer = L.geoJSON(towns, {
             iconAnchor: anchorOfIcon
         });
         // attaches the correct icon and display data to each marker
-        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
+        return L.marker(latlng, {icon: smallIcon}, opacity: 0, feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
