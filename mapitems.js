@@ -156,6 +156,18 @@ let towns = {
                 "type":"Point",
                 "coordinates": [1,1]
             }
+        },
+        {"type": "Feature","properties": {"name": "Atchison",
+            "displayIcon": "iconsAtchison",
+            "population": "21, 000",
+            "info": "Sometimes called the City of the Thousand Arches, Atchison is the capital city of the Kingdom of Danuthan.",
+            "friends":"Haven't made any yet.",
+            "foes":"A gang known as the 'Crunchers', which Kerrick was once a part of."
+                },
+                "geometry": {
+                    "type":"Point",
+                    "coordinates": [718.882071,749.859311]
+            }
         }
     ]
 };

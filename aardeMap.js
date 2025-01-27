@@ -63,26 +63,26 @@ const townsLayer = L.geoJSON(towns, {
     // onEachFeature: onEachFeature,
     maxZoom: 1
 });
-const citiesLayer = L.geoJSON(cities, {
-    pointToLayer: function (feature, latlng) {
-        // set up the icons, referencing the geojson data for marker specifics
-        var smallIcon = L.icon({
-            iconUrl: 'images/' + feature.properties.displayIcon + '.png',
-            iconSize: [100,100],
-            iconAnchor: [50,50]
-        });
-        // attaches the correct icon and display data to each marker
-        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
-            document.getElementById("title").innerHTML = feature.properties.name;
-            document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
-            document.getElementById("information").innerHTML = feature.properties.info;
-            document.getElementById("good").innerHTML = 'Friends: '+feature.properties.friends;
-            document.getElementById("bad").innerHTML = 'Foes: '+feature.properties.foes;
-        });
-    },
-    // onEachFeature: onEachFeature,
-    maxZoom: 1
-});
+// const citiesLayer = L.geoJSON(cities, {
+//     pointToLayer: function (feature, latlng) {
+//         // set up the icons, referencing the geojson data for marker specifics
+//         var smallIcon = L.icon({
+//             iconUrl: 'images/' + feature.properties.displayIcon + '.png',
+//             iconSize: [100,100],
+//             iconAnchor: [50,50]
+//         });
+//         // attaches the correct icon and display data to each marker
+//         return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
+//             document.getElementById("title").innerHTML = feature.properties.name;
+//             document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
+//             document.getElementById("information").innerHTML = feature.properties.info;
+//             document.getElementById("good").innerHTML = 'Friends: '+feature.properties.friends;
+//             document.getElementById("bad").innerHTML = 'Foes: '+feature.properties.foes;
+//         });
+//     },
+//     // onEachFeature: onEachFeature,
+//     maxZoom: 1
+// });
 // Add the points of interest
 const interestLayer = L.geoJSON(interest, {
     pointToLayer: function (feature, latlng) {
@@ -110,7 +110,7 @@ var terrain = L.imageOverlay('images/layerTerrain.png',bounds).addTo(map);
 var water = L.imageOverlay('images/layerWater.png',bounds).addTo(map);
 var biomes = L.imageOverlay('images/layerBiomes.png',bounds).addTo(map);
 var roads = L.imageOverlay('images/layerRoads.png',bounds);
-var peopleThings = L.layerGroup([roads,townsLayer,citiesLayer]);
+var peopleThings = L.layerGroup([roads,townsLayer]);
 var overlayMaps = {
     "Terrain": terrain,
     "Rivers and Lakes": water,
