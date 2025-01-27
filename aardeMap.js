@@ -1,4 +1,4 @@
-var updateNum = 170
+var updateNum = 171
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -33,7 +33,8 @@ L.control.ruler(options).addTo(map);
 console.log("Zoom = ",map.getZoom());
 
 // add the geojson
-
+numTown = 0;
+numCity = 0;
 // Add the towns and villages
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
@@ -42,10 +43,14 @@ const townsLayer = L.geoJSON(towns, {
         if (feature.properties.displayIcon == "iconsVillage" || feature.properties.displayIcon == "iconsFort") {
             sizeOfIcon = [20,20];
             anchorOfIcon = [10,10];
+            numTown ++;
+            console.log("Number of towns = ",numTown,"\nNumber of cities: ",numCity)
         } else if (feature.properties.displayIcon == "iconsCity") {
             sizeOfIcon = [50,50];
             anchorOfIcon = [25,25];
-            setOpacity = 1;
+            setOpacity = 1.0;
+            numCity ++;
+            console.log("Number of towns = ",numTown,"\nNumber of cities: ",numCity)
         }
         var smallIcon = L.icon({
             iconUrl: 'images/' + feature.properties.displayIcon + '.png',
