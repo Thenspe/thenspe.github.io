@@ -1,4 +1,4 @@
-var updateNum = 142
+var updateNum = 176
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -16,8 +16,8 @@ map.setView([735,600], 1.5);
 var options = {
     position: 'topleft',
     lengthUnit: {
-        display: 'days',
-        factor: 0.00025, //set to 0.007 for km
+        display: 'km',
+        factor: 0.0002, //set to 0.0002 for km, 
         decimal: 1,
         label: 'Distance:'
     },
@@ -38,13 +38,21 @@ console.log("Zoom = ",map.getZoom());
 const townsLayer = L.geoJSON(towns, {
     pointToLayer: function (feature, latlng) {
         // set up the icons, referencing the geojson data for marker specifics
+        var sizeOfIcon,anchorOfIcon;
+        if (feature.properties.displayIcon == "iconsVillage" || feature.properties.displayIcon == "iconsFort") {
+            sizeOfIcon = [20,20];
+            anchorOfIcon = [10,10];
+        } else if (feature.properties.displayIcon == "iconsCity") {
+            sizeOfIcon = [50,50];
+            anchorOfIcon = [25,25];
+        }
         var smallIcon = L.icon({
             iconUrl: 'images/' + feature.properties.displayIcon + '.png',
-            iconSize: [20,20],
-            iconAnchor: [10,10]
+            iconSize: sizeOfIcon,
+            iconAnchor: anchorOfIcon
         });
         // attaches the correct icon and display data to each marker
-        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
+        return L.marker(latlng, {icon: smallIcon, opacity: 0}, feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
             document.getElementById("information").innerHTML = feature.properties.info;
@@ -55,14 +63,52 @@ const townsLayer = L.geoJSON(towns, {
     // onEachFeature: onEachFeature,
     maxZoom: 1
 });
+
 // Add the points of interest
 const interestLayer = L.geoJSON(interest, {
     pointToLayer: function (feature, latlng) {
         // set up the icons, referencing the geojson data for marker specifics
+        var sizeOfIcon,anchorOfIcon;
+        if(feature.properties.displayIcon = "iconsMine") {
+            sizeOfIcon = [20,20];
+            anchorOfIcon = [10,10];
+        } else {
+            sizeOfIcon = [40,40];
+            anchorOfIcon = [20,20];;
+        }
         var smallIcon = L.icon({
             iconUrl: 'images/' + feature.properties.displayIcon + '.png',
-            iconSize: [20,20],
-            iconAnchor: [10,10]
+            iconSize: sizeOfIcon,
+            iconAnchor: anchorOfIcon
+        });
+        // attaches the correct icon and display data to each marker
+        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
+            document.getElementById("title").innerHTML = feature.properties.name;
+            document.getElementById("population").innerHTML = ''; //remove anything placed here by townsLayer
+            document.getElementById("information").innerHTML = feature.properties.info;
+            document.getElementById("good").innerHTML = 'Discoveries: '+feature.properties.discoveries;
+            document.getElementById("bad").innerHTML = 'Dangers: '+feature.properties.dangers;
+        });
+    },
+    // onEachFeature: onEachFeature,
+    maxZoom: 3.5
+});
+// Add the faction icons
+const factionLayer = L.geoJSON(factionAssets, {
+    pointToLayer: function (feature, latlng) {
+        // set up the icons, referencing the geojson data for marker specifics
+        var sizeOfIcon,anchorOfIcon;
+        if(feature.properties.displayIcon = "flag") {
+            sizeOfIcon = [20,20];
+            anchorOfIcon = [10,10];
+        } else {
+            sizeOfIcon = [40,40];
+            anchorOfIcon = [20,20];;
+        }
+        var smallIcon = L.icon({
+            iconUrl: 'images/' + feature.properties.displayIcon + '.png',
+            iconSize: sizeOfIcon,
+            iconAnchor: anchorOfIcon
         });
         // attaches the correct icon and display data to each marker
         return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
@@ -82,13 +128,14 @@ var terrain = L.imageOverlay('images/layerTerrain.png',bounds).addTo(map);
 var water = L.imageOverlay('images/layerWater.png',bounds).addTo(map);
 var biomes = L.imageOverlay('images/layerBiomes.png',bounds).addTo(map);
 var roads = L.imageOverlay('images/layerRoads.png',bounds);
-var peopleThings = L.layerGroup([roads,townsLayer]);
+var peopleThings = L.layerGroup([roads,townsLayer,citiesLayer]);
 var overlayMaps = {
     "Terrain": terrain,
     "Rivers and Lakes": water,
     "Biomes": biomes,
     "Roads and Cities": peopleThings,
-    "Points of Interest": interestLayer
+    "Points of Interest": interestLayer,
+    "Factions": factionLayer
 };
 // layer control
 var layerControl = L.control.layers(null,overlayMaps,{collapsed:false}).addTo(map);
@@ -99,3 +146,18 @@ function onMapClick(e) {
     console.log("You clicked the map at " + e.latlng.toString(),'\n',"The current zoom is ", map.getZoom(),'\n',"Update ",updateNum);
 };
 map.on('click', onMapClick);
+
+// show and hide items based on zoom level
+map.on('zoomend',function() {
+    var currentZoom = map.getZoom();
+    if(currentZoom >= 1) {
+        peopleThings.addTo(map);
+        citiesLayer.addTo(map);
+        interestLayer.addTo(map);
+    }
+    else {
+        peopleThings.remove();
+        citiesLayer.remove();
+        interestLayer.remove();
+    }
+});
