@@ -1,10 +1,10 @@
-var updateNum = 179
+var updateNum = 180
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: -.5,
+    minZoom: -.75,
     maxZoom: 3.5,
     zoomSnap: 0.25
 });
@@ -58,7 +58,7 @@ const townsLayer = L.geoJSON(towns, {
             document.getElementById("information").innerHTML = feature.properties.info;
             document.getElementById("good").innerHTML = 'Friends: '+feature.properties.friends;
             document.getElementById("bad").innerHTML = 'Foes: '+feature.properties.foes;
-        });
+        }).bindTooltip(feature.properties.name,{permanent: true});
     },
     // onEachFeature: onEachFeature,
     maxZoom: 1
