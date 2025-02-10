@@ -1,4 +1,4 @@
-var updateNum = 176
+var updateNum = 177
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -9,7 +9,7 @@ var map = L.map('map', {
     zoomSnap: 0.25
 });
 var bounds = [[0,0],[1000,1000]];
-var image = L.imageOverlay('images/blankMap.png',bounds).addTo(map);
+var image = L.imageOverlay('images/LayerMap.png',bounds).addTo(map);
 map.setView([735,600], 1.5);
 
 //Measurement tool
@@ -87,15 +87,9 @@ const interestLayer = L.geoJSON(interest, {
 });
 
 //map layers and controls
-var terrain = L.imageOverlay('images/layerTerrain.png',bounds).addTo(map);
-var water = L.imageOverlay('images/layerWater.png',bounds).addTo(map);
-var biomes = L.imageOverlay('images/layerBiomes.png',bounds).addTo(map);
 var roads = L.imageOverlay('images/layerRoads.png',bounds);
 var peopleThings = L.layerGroup([roads,townsLayer]);
 var overlayMaps = {
-    "Terrain": terrain,
-    "Rivers and Lakes": water,
-    "Biomes": biomes,
     "Roads and Cities": peopleThings,
     "Points of Interest": interestLayer
 };
