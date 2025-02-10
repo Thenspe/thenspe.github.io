@@ -1,4 +1,4 @@
-var updateNum = 177
+var updateNum = 178
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -87,14 +87,14 @@ const interestLayer = L.geoJSON(interest, {
 });
 
 //map layers and controls
-var roads = L.imageOverlay('images/layerRoads.png',bounds);
-var peopleThings = L.layerGroup([roads,townsLayer]);
-var overlayMaps = {
-    "Roads and Cities": peopleThings,
-    "Points of Interest": interestLayer
-};
+// var roads = L.imageOverlay('images/layerRoads.png',bounds);
+// var peopleThings = L.layerGroup([roads,townsLayer]);
+// var overlayMaps = {
+//     "Roads and Cities": peopleThings,
+//     "Points of Interest": interestLayer
+// };
 // layer control
-var layerControl = L.control.layers(null,overlayMaps,{collapsed:false}).addTo(map);
+// var layerControl = L.control.layers(null,overlayMaps,{collapsed:false}).addTo(map);
 
 // Determine what happens when you click on the map
 //Display coordinates, zoom, and current update version
@@ -107,28 +107,12 @@ map.on('click', onMapClick);
 map.on('zoomend',function() {
     var currentZoom = map.getZoom();
     if (currentZoom >= 1) {
-        if (map.hasLayer(peopleThings)) {
-            peopleThings.addTo(map);
-
-            if (map.hasLayer(interestLayer)) {
-                interestLayer.addTo(map);
-                console.log("Cities and interests are both selected.")
-            }
-            else {
-                console.log("Cities is selected, but not interests.")
-            }
-        }
-        else if (map.hasLayer(interestLayer)) {
-            interestLayer.addTo(map);
-            console.log("Interests is selected, but not cities.")
-        }
-        else {
-            console.log("Cities and interests are not selected.")
-        }
+        peopleThings.addTo(map);
+        interestLayer.addTo(map);
     }
     else {
         peopleThings.remove();
-        citiesLayer.remove();
+        // citiesLayer.remove();
         interestLayer.remove();
     }
 });
