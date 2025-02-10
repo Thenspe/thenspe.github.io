@@ -1,4 +1,4 @@
-var updateNum = 178
+var updateNum = 179
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -87,8 +87,8 @@ const interestLayer = L.geoJSON(interest, {
 });
 
 //map layers and controls
-// var roads = L.imageOverlay('images/layerRoads.png',bounds);
-// var peopleThings = L.layerGroup([roads,townsLayer]);
+var roads = L.imageOverlay('images/layerRoads.png',bounds);
+var peopleThings = L.layerGroup([roads,townsLayer]);
 // var overlayMaps = {
 //     "Roads and Cities": peopleThings,
 //     "Points of Interest": interestLayer
