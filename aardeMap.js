@@ -1,4 +1,4 @@
-var updateNum = 180
+var updateNum = 181
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -58,7 +58,7 @@ const townsLayer = L.geoJSON(towns, {
             document.getElementById("information").innerHTML = feature.properties.info;
             document.getElementById("good").innerHTML = 'Friends: '+feature.properties.friends;
             document.getElementById("bad").innerHTML = 'Foes: '+feature.properties.foes;
-        }).bindTooltip(feature.properties.name,{permanent: true});
+        });
     },
     // onEachFeature: onEachFeature,
     maxZoom: 1
