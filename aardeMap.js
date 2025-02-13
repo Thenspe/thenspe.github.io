@@ -1,4 +1,4 @@
-var updateNum = 181
+var updateNum = 182
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -89,6 +89,8 @@ const interestLayer = L.geoJSON(interest, {
 //map layers and controls
 var roads = L.imageOverlay('images/layerRoads.png',bounds);
 var peopleThings = L.layerGroup([roads,townsLayer]);
+var interestVisual = L.imageOverlay('images/layerInterest.png',bounds);
+var interestingThings = L.layerGroup([interestVisual,interestLayer]);
 // var overlayMaps = {
 //     "Roads and Cities": peopleThings,
 //     "Points of Interest": interestLayer
@@ -108,11 +110,11 @@ map.on('zoomend',function() {
     var currentZoom = map.getZoom();
     if (currentZoom >= 1) {
         peopleThings.addTo(map);
-        interestLayer.addTo(map);
+        interestingThings.addTo(map);
     }
     else {
         peopleThings.remove();
         // citiesLayer.remove();
-        interestLayer.remove();
+        interestingThings.remove();
     }
 });

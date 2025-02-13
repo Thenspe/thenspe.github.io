@@ -210,7 +210,7 @@ let interest = {
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [593.504516,701.626099]
+                "coordinates": [607.439141,684.510116]
             }
         },
         {"type": "Feature","properties": {"name": "blank",
