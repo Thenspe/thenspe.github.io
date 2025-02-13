@@ -40,7 +40,7 @@ let towns = {
         {"type": "Feature","properties": {"name": "Fort Kairth",
                 "displayIcon": "iconsFort",
                 "population": "3200",
-                "info": "unexplored",
+                "info": "A military frontier town, with clear evidence of well-disciplined troops. The fort is responsible for patrolling the Danuthan border from the Ruggengrat Mountains to the western shore of the River Eltenshae.",
                 "friends":"Haven't made any yet.",
                 "foes":"Haven't made any yet."
             },

@@ -1,4 +1,4 @@
-var updateNum = 183
+var updateNum = 184
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -74,7 +74,7 @@ const interestLayer = L.geoJSON(interest, {
             iconAnchor: [20,20]
         });
         // attaches the correct icon and display data to each marker
-        return L.marker(latlng, {icon: smallIcon, opacity: 0}, feature).on('click', function(e){
+        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = ''; //remove anything placed here by townsLayer
             document.getElementById("information").innerHTML = feature.properties.info;
@@ -110,11 +110,11 @@ map.on('zoomend',function() {
     var currentZoom = map.getZoom();
     if (currentZoom >= 1) {
         peopleThings.addTo(map);
-        interestingThings.addTo(map);
+        interestLayer.addTo(map);
     }
     else {
         peopleThings.remove();
         // citiesLayer.remove();
-        interestingThings.remove();
+        interestLayer.remove();
     }
 });
