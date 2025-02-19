@@ -10,7 +10,7 @@ var map = L.map('map', {
 });
 var bounds = [[0,0],[1000,1000]];
 var image = L.imageOverlay('images/LayerMap.png',bounds).addTo(map);
-map.setView([[718.882071,749.859311]], 1.5);
+map.setView([718.882071,749.859311], 1.5);
 
 //Measurement tool
 var options = {
