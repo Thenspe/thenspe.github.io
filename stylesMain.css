@@ -32,6 +32,10 @@ p {
     /* min-width: 250px; */
     display: inline-block;
 }
+#parchImg {
+    max-height: 100vh;
+    width: 100vw;
+}
 #map {
     position: absolute;
     background-color: rgba(0,0,0,0);
