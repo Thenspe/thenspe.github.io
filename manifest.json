@@ -1,0 +1,12 @@
+{
+    "name": "Aarde Map",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "action": {
+      "title": "A map of Aarde",
+      "icon": "https://vandam.ca/images/scrollicon.svg",
+      "popover": "https://vandam.ca",
+      "height": 600,
+      "width": 400
+    }
+  }
