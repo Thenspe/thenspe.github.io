@@ -1,4 +1,4 @@
-var updateNum = 188
+var updateNum = 189
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
