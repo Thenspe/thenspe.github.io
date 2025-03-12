@@ -16,7 +16,7 @@ let towns = {
         {"type": "Feature","properties": {"name": "South Ablein",
                 "displayIcon": "iconsVillage",
                 "population": "9500",
-                "info": "The southern portion of the city of Ablein is a diverse hub of activity, with humans, demihumans, and fae living peacefully together. Some separation is apparent, so you don't get a sense of harmonious living; neighbourhoods seem to be made up primarily of one group or another, but they all brush shoulders at the shops and in the squares without hostility. The buildings are roughly constructed but well-maintained, the streets are cramped but clean. The thoroughfares are filled with conversation, laughter, sorrow and joy. It is truly the shining jewel of the Danuthan Kingdom, although you'd never hear that from the rest of the kingdom.",
+                "info": "The southern portion of the city of Ablein is a diverse hub of activity, with humans, demihumans, and fae living peacefully together. Some separation is apparent, so you don't get a sense of harmonious living; neighbourhoods seem to be made up primarily of one group or another, but they all brush shoulders at the shops and in the squares without hostility. The buildings are roughly constructed but well-maintained, the streets are cramped but clean. The thoroughfares are filled with conversation, laughter, sorrow and joy. It is truly the shining jewel of the Danuthan Kingdom, although you'd never hear that from the rest of the kingdom.\nThe party particularly enjoy's the Hurt & Shirts weapons and armoury, Nora's Apothecary, and Bostwich's Artifacts.",
                 "friends":"Flisben, Tharukk, Neeral, Bostwich, Kaedan",
                 "foes":"Four surly thugs, possibly from the Carnifex."
             },
@@ -171,23 +171,6 @@ let towns = {
         }
     ]
 };
-let cities = {
-    "type": "FeatureCollection",
-    "features": [
-        {"type": "Feature","properties": {"name": "Atchison",
-        "displayIcon": "iconsAtchison",
-        "population": "21, 000",
-        "info": "Sometimes called the City of the Thousand Arches, Atchison is the capital city of the Kingdom of Danuthan.",
-        "friends":"Haven't made any yet.",
-        "foes":"A gang known as the 'Crunchers', which Kerrick was once a part of."
-            },
-            "geometry": {
-                "type":"Point",
-                "coordinates": [718.882071,749.859311]
-            }
-        }
-    ]
-};
 let interest = {
     "type": "FeatureCollection",
     "features": [
@@ -204,9 +187,9 @@ let interest = {
         },
         {"type": "Feature","properties": {"name": "Feylan's Keep",
             "displayIcon": "iconsRuins", //iconsMine, iconsOutsiderBase, iconsRuins
-            "info": "One-time home of the healer Zuthoeng, and a frontier defence for the kingdom of Danuthan before the keep was destroyed in the early 1100's.",
-            "discoveries":"Haven't made any yet.",
-            "dangers":"Who knows..."
+            "info": "One-time home of the healer Zuthoeng, and a frontier defence for the kingdom of Danuthan before the keep was abandoned in 618.",
+            "discoveries":"Artefacts, curses, and a deep buried beneath the keep.",
+            "dangers":"Fog, undead, mysteries..."
             },
             "geometry": {
                 "type":"Point",
