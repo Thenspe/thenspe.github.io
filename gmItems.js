@@ -6,8 +6,8 @@ let factionAssets = {
             "properties": {
                 "faction": "TBoE",
                 "assetName":"HomeBase",
-                "colour": "Red", //b5141c
-                "displayIcon":"flag"
+                "colour": "red", //b5141c
+                "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
@@ -19,8 +19,8 @@ let factionAssets = {
             "properties": {
                 "faction": "VidarLeague",
                 "assetName":"HomeBase",
-                "colour": "Blue", //1437b5
-                "displayIcon":"flag"
+                "colour": "blue", //1437b5
+                "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
@@ -32,8 +32,8 @@ let factionAssets = {
             "properties": {
                 "faction": "Mercenaries",
                 "assetName":"Offices",
-                "colour": "Yellow", //dbd00e
-                "displayIcon":"flag"
+                "colour": "yellow", //dbd00e
+                "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
@@ -46,7 +46,7 @@ let factionAssets = {
                 "faction": "Kloshtaggen",
                 "assetName":"Home Base",
                 "info":"Location of the Final Ritual.",
-                "colour": "Purple", //b813c9
+                "colour": "purple", //b813c9
                 "displayIcon":"OutsiderBase"
             },
             "geometry": {
@@ -60,8 +60,8 @@ let factionAssets = {
                 "faction": "Kloshtaggen",
                 "assetName":"Fortress",
                 "info":"A Kloshtaggen stronghold.",
-                "colour": "Purple", //b813c9
-                "displayIcon":"flag"
+                "colour": "purple", //b813c9
+                "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
@@ -73,8 +73,8 @@ let factionAssets = {
             "properties": {
                 "faction": "Artefactors",
                 "assetName":"HomeBase",
-                "colour": "Pink", //e62d99
-                "displayIcon":"flag"
+                "colour": "pink", //e62d99
+                "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
@@ -87,8 +87,8 @@ let factionAssets = {
                 "faction": "Barbarians",
                 "assetName":"TribeLocation",
                 "info":"A barbarian tribe encampment.",
-                "colour": "Orange", //f59b14
-                "displayIcon":"flag"
+                "colour": "orange", //f59b14
+                "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
