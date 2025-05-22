@@ -4,7 +4,7 @@ let towns = {
         {"type": "Feature","properties": {"name": "Yarth",
                 "displayIcon": "iconsVillage",
                 "population": "2600",
-                "info": "Yarth is a small town at the edge of the Ruggengrat Mountains. Part of the kingdom of Danuthan, it boasts a few farms and some mining activity in the foothills.\nRecently the True Blood of Earth has sent a representative, Mehael, to try and proselytise their human-first messsage in the area.\nNeil has a contact here, and the local smith is a quiet but friendly fellow.",
+                "info": "Yarth was a small town at the edge of the Ruggengrat Mountains, but was destroyed by the Kloshtaggen on 20 July 958.",
                 "friends": "Neil's contact (Winthrop), village smith",
                 "foes": "Mehael, of the True Blood of Earth."
             },
