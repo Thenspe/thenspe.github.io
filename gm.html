@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="description" content="A map project for the TTRPG 'Worlds Without Number' ">
     <link rel="stylesheet" href="stylesMain.css" />
-    <link rel="stylesheet" href="leafletjs/leaflet.css" />
     <!--Add leaflet-->
+    <link rel="stylesheet" href="leafletjs/leaflet.css" />
     <script src="leafletjs/leaflet.js"></script>
-    <link rel="stylesheet" href="thenspe.github.io\leaflet-ruler-master\src\leaflet-ruler.css" />
     <!--add ruler - see https://github.com/gokertanrisever/leaflet-ruler -->
+    <link rel="stylesheet" href="thenspe.github.io\leaflet-ruler-master\src\leaflet-ruler.css" />
     <script src="thenspe.github.io\leaflet-ruler-master\src\leaflet-ruler.js"></script>
     <!--add fancy font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,14 +19,14 @@
 <body>
 <main>
     <div id="parchment">
-        <img src="images/Parchment.png" alt="a scroll of parchment on a desk">
+        <img src="images/Parchment.png" alt="a scroll of parchment on a desk" id="parchImg">
         <div id="map"></div>
         <div id="right">
             <p id="information">Welcome to Aarde, a world of ancient technology and fearsome magic created by Stephen VanDam for the Worlds Without Number tabletop roleplaying game.</p>
         </div>
         <div id="left">
-            <h2 id="title">Aarde</h2>
-            <p id="population">Population: 1,130,000</p>
+            <h1 id="title">Aarde</h1>
+            <p id="population">Iterum 682</p>
             <p id="good">Featuring Freya, Kerrick, Neil, Raze, and one who has not yet earned his name.</p>
             <p id="bad"></p>
         </div>
@@ -36,4 +36,7 @@
 <script src="mapitems.js"></script>
 <script src="gmItems.js"></script>
 <script src="GMaardeMap.js"></script>
+<!-- <script>
+    map.removeControl(map.zoomControl);
+</script> -->
 </html>

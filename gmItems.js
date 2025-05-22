@@ -46,7 +46,7 @@ let factionAssets = {
                 "faction": "Kloshtaggen",
                 "assetName":"HomeBase",
                 "colour": "Purple", //b813c9
-                "displayIcon":"flag"
+                "displayIcon":"OutsiderBase"
             },
             "geometry": {
                 "type":"Point",
