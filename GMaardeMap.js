@@ -1,4 +1,4 @@
-var updateNum = 194
+var updateNum = 195
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -78,8 +78,8 @@ const interestLayer = L.geoJSON(interest, {
             document.getElementById("title").innerHTML = feature.properties.name;
             document.getElementById("population").innerHTML = ''; //remove anything placed here by townsLayer
             document.getElementById("information").innerHTML = feature.properties.info;
-            document.getElementById("good").innerHTML = 'Discoveries: '+feature.properties.discoveries;
-            document.getElementById("bad").innerHTML = 'Dangers: '+feature.properties.dangers;
+            document.getElementById("good").innerHTML = 'Status: '+feature.properties.status;
+            document.getElementById("bad").innerHTML = 'Encountered: '+feature.properties.encountered;
         });
     },
     // onEachFeature: onEachFeature,

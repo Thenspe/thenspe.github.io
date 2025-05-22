@@ -176,9 +176,9 @@ let interest = {
     "features": [
         {"type": "Feature","properties": {"name": "Ancient Mine",
             "displayIcon": "iconsMine",
-            "info": "Explored: July 6, 958\nA landslide uncovered an ancient mine a half day from Yarth. Our adventurers were the first to enter it, based off a tip from one of Neil's informants. ",
-            "discoveries":"Valuable ores, ancient salvage, ancient equipment, medical texts.",
-            "dangers":"Deep Moles, cave-ins."
+            "info": "A landslide uncovered an ancient mine a half day from Yarth. Our adventurers were the first to enter it, based off a tip from one of Neil's informants. ",
+            "status":"Explored: July 6, 958",
+            "encountered":"Valuable ores, ancient salvage, ancient equipment, medical texts. Deep Moles, cave-ins."
             },
             "geometry": {
                 "type":"Point",
@@ -187,9 +187,9 @@ let interest = {
         },
         {"type": "Feature","properties": {"name": "Feylan's Keep",
             "displayIcon": "iconsRuins", //iconsMine, iconsOutsiderBase, iconsRuins
-            "info": "Explored: July 12-15, 958\nOne-time home of the healer Zuthoeng, and a frontier defence for the kingdom of Danuthan before the keep was abandoned in 618.",
-            "discoveries":"Artefacts, curses, and a deep buried beneath the keep.",
-            "dangers":"Fog, undead, mysteries..."
+            "info": "One-time home of the healer Zuthoeng, and a frontier defence for the kingdom of Danuthan before the keep was abandoned in 618.",
+            "status":"Explored: July 12-15, 958",
+            "encountered":"Artefacts, curses, and a deep buried beneath the keep. Fog, undead, mysteries..."
             },
             "geometry": {
                 "type":"Point",
@@ -198,9 +198,9 @@ let interest = {
         },
         {"type": "Feature","properties": {"name": "blank",
             "displayIcon": "iconsMine", //iconsMine, iconsOutsiderBase, iconsRuins
-            "info": "unexplored",
-            "discoveries":"Haven't made any yet.",
-            "dangers":"Scarycave."
+            "info": "Little is known of this location.",
+            "status":"unexplored.",
+            "encountered":"Scarycave."
             },
             "geometry": {
                 "type":"Point",
