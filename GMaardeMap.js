@@ -96,11 +96,11 @@ const factionsLayer = L.geoJSON(factionAssets, {
         });
         // attaches the correct icon and display data to each marker
         return L.marker(latlng, {icon: smallIcon, opacity: 0}, feature).on('click', function(e){
-            document.getElementById("title").innerHTML = feature.properties.name;
-            document.getElementById("population").innerHTML = 'Population: '+feature.properties.population;
+            document.getElementById("title").innerHTML = feature.properties.faction;
+            document.getElementById("population").innerHTML = 'Asset: '+feature.properties.assetName;
             document.getElementById("information").innerHTML = feature.properties.info;
-            document.getElementById("good").innerHTML = 'Friends: '+feature.properties.friends;
-            document.getElementById("bad").innerHTML = 'Foes: '+feature.properties.foes;
+            document.getElementById("good").innerHTML = 'Colour: '+feature.properties.colour;
+            document.getElementById("bad").innerHTML = 'Icon: '+feature.properties.displayIcon;
         });
     },
     // onEachFeature: onEachFeature,
@@ -112,6 +112,7 @@ var roads = L.imageOverlay('images/layerRoads.png',bounds);
 var peopleThings = L.layerGroup([roads,townsLayer]);
 var interestVisual = L.imageOverlay('images/layerInterest.png',bounds);
 var interestingThings = L.layerGroup([interestVisual,interestLayer]);
+var fronts = L.layerGroup([factionsLayer]).addTo(map);
 // var overlayMaps = {
 //     "Roads and Cities": peopleThings,
 //     "Points of Interest": interestLayer

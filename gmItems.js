@@ -31,7 +31,7 @@ let factionAssets = {
             "type": "Feature",
             "properties": {
                 "faction": "Mercenaries",
-                "assetName":"HomeBase",
+                "assetName":"Offices",
                 "colour": "Yellow", //dbd00e
                 "displayIcon":"flag"
             },
@@ -44,7 +44,8 @@ let factionAssets = {
             "type": "Feature",
             "properties": {
                 "faction": "Kloshtaggen",
-                "assetName":"HomeBase",
+                "assetName":"Home Base",
+                "info":"Location of the Final Ritual.",
                 "colour": "Purple", //b813c9
                 "displayIcon":"OutsiderBase"
             },
@@ -58,6 +59,7 @@ let factionAssets = {
             "properties": {
                 "faction": "Kloshtaggen",
                 "assetName":"Fortress",
+                "info":"A Kloshtaggen stronghold.",
                 "colour": "Purple", //b813c9
                 "displayIcon":"flag"
             },
@@ -84,6 +86,7 @@ let factionAssets = {
             "properties": {
                 "faction": "Barbarians",
                 "assetName":"TribeLocation",
+                "info":"A barbarian tribe encampment.",
                 "colour": "Orange", //f59b14
                 "displayIcon":"flag"
             },
