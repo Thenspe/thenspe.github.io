@@ -6,12 +6,13 @@ let factionAssets = {
             "properties": {
                 "faction": "TBoE",
                 "assetName":"HomeBase",
+                "info":"The capital of the True Blood of Earth.",
                 "colour": "red", //b5141c
                 "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [691.643362,719.704373]
+                "coordinates": [764.627227,198.816023]
             }
         },
         {
@@ -19,12 +20,13 @@ let factionAssets = {
             "properties": {
                 "faction": "VidarLeague",
                 "assetName":"HomeBase",
+                "info":"Vidar lives here.",
                 "colour": "blue", //1437b5
                 "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [641.593131,700.954989]
+                "coordinates": [508.418611,477.823465]
             }
         },
         {
@@ -32,12 +34,13 @@ let factionAssets = {
             "properties": {
                 "faction": "Mercenaries",
                 "assetName":"Offices",
+                "info":"The home offices of the Carnifex.",
                 "colour": "yellow", //dbd00e
                 "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [784.657135,695.546322]
+                "coordinates": [724.517077,751.350386]
             }
         },
         {
@@ -73,12 +76,13 @@ let factionAssets = {
             "properties": {
                 "faction": "Artefactors",
                 "assetName":"HomeBase",
+                "info":"The secret headquarters of the Artefactors.",
                 "colour": "pink", //e62d99
                 "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
-                "coordinates": [752.689212,723.781422]
+                "coordinates": [713.11911,751.618407]
             }
         },
         {
