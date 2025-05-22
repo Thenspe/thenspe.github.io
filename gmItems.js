@@ -50,7 +50,7 @@ let factionAssets = {
                 "assetName":"Home Base",
                 "info":"Location of the Final Ritual.",
                 "colour": "purple", //b813c9
-                "displayIcon":"OutsiderBase"
+                "displayIcon":"Flag"
             },
             "geometry": {
                 "type":"Point",
