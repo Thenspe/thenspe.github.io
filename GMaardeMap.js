@@ -1,4 +1,4 @@
-var updateNum = 193
+var updateNum = 194
 console.log("Update ",updateNum);
 var left = document.getElementById("left");
 
@@ -95,7 +95,7 @@ const factionsLayer = L.geoJSON(factionAssets, {
             iconAnchor: [20,20]
         });
         // attaches the correct icon and display data to each marker
-        return L.marker(latlng, {icon: smallIcon, opacity: 0}, feature).on('click', function(e){
+        return L.marker(latlng, {icon: smallIcon}, feature).on('click', function(e){
             document.getElementById("title").innerHTML = feature.properties.faction;
             document.getElementById("population").innerHTML = 'Asset: '+feature.properties.assetName;
             document.getElementById("information").innerHTML = feature.properties.info;
