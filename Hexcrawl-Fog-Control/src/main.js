@@ -772,7 +772,7 @@ async function createTools() {
 
     icons: [
       {
-        icon: "./hex.svg",
+        icon: "https://vandam.ca/Hexcrawl-Fog-Control/hex.svg",
         label:
           "Hexcrawl Fog Control",
       },
@@ -792,7 +792,7 @@ async function createTools() {
 
     icons: [
       {
-        icon: "./toggleIcon.svg",
+        icon: "https://vandam.ca/Hexcrawl-Fog-Control/toggleIcon.svg",
         label: "Reveal Hex",
 
         filter: {
@@ -906,7 +906,7 @@ async function createTools() {
 
     icons: [
       {
-        icon: "./multiToggle.svg",
+        icon: "https://vandam.ca/Hexcrawl-Fog-Control/multiToggle.svg",
         label: "Reveal Line",
 
         filter: {
@@ -1024,7 +1024,7 @@ async function createTools() {
 
     icons: [
       {
-        icon: "./hex.svg",
+        icon: "https://vandam.ca/Hexcrawl-Fog-Control/hex.svg",
         label: "Fog Map",
 
         filter: {
