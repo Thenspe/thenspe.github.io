@@ -11,6 +11,9 @@ const TOOL_ID =
 const REVEAL_MODE_ID =
   `${EXTENSION_ID}/reveal`;
 
+const REVEAL_AREA_MODE_ID =
+  `${EXTENSION_ID}/reveal-area`;
+
 const REVEAL_LINE_MODE_ID =
   `${EXTENSION_ID}/reveal-line`;
 
@@ -446,6 +449,45 @@ function indexFogCells(items) {
   );
 }
 
+function getNearbyFogCellIds(centerPosition) {
+  const cells = [];
+
+  for (const [key, id] of fogCellIndex) {
+    const [x, y] = key.split(",").map(Number);
+
+    const dx =
+      x - centerPosition.x;
+
+    const dy =
+      y - centerPosition.y;
+
+    const distance =
+      Math.sqrt(
+        dx * dx +
+        dy * dy
+      );
+
+    if (distance > 0.001) {
+      cells.push({
+        id,
+        distance,
+      });
+    }
+  }
+
+  cells.sort(
+    (a, b) =>
+      a.distance -
+      b.distance
+  );
+
+  return cells
+    .slice(0, 6)
+    .map(
+      (cell) =>
+        cell.id
+    );
+}
 
 async function getFogCells() {
   return await OBR.scene.items.getItems(
@@ -896,7 +938,103 @@ async function createTools() {
       },
   });
 
+  // ==========================================================
+  // REVEAL AREA
+  // ==========================================================
 
+  await OBR.tool.createMode({
+    id: REVEAL_AREA_MODE_ID,
+
+    icons: [
+      {
+        icon: "https://vandam.ca/Hexcrawl-Fog-Control/multiToggle.svg",
+        label: "Reveal Area",
+
+        filter: {
+          activeTools: [
+            TOOL_ID,
+          ],
+
+          roles: [
+            "GM",
+          ],
+        },
+      },
+    ],
+
+    onToolClick:
+      async (_, event) => {
+
+        console.log(
+          "Reveal Area click:",
+          event.pointerPosition
+        );
+
+        const snapped =
+          await OBR.scene.grid.snapPosition(
+            event.pointerPosition,
+            1,
+            false,
+            true
+          );
+
+        console.log(
+          "Reveal Area snapped:",
+          snapped
+        );
+
+        const centerKey =
+          positionKey(
+            snapped
+          );
+
+        const centerId =
+          fogCellIndex.get(
+            centerKey
+          );
+
+        if (!centerId) {
+          console.warn(
+            "Reveal Area: no fog cell found for:",
+            snapped
+          );
+
+          return;
+        }
+
+        const nearbyIds =
+          getNearbyFogCellIds(
+            snapped
+          );
+
+        const ids = [
+          centerId,
+          ...nearbyIds,
+        ];
+
+        const uniqueIds =
+          [...new Set(ids)];
+
+        console.log(
+          "Reveal Area: revealing",
+          uniqueIds.length,
+          "fog cells"
+        );
+
+        await OBR.scene.items.updateItems(
+          uniqueIds,
+          (items) => {
+            for (
+              const item of items
+            ) {
+              item.visible =
+                false;
+            }
+          }
+        );
+      },
+  });
+  
   // ==========================================================
   // REVEAL LINE
   // ==========================================================
