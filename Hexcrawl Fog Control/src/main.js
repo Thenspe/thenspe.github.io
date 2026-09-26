@@ -1060,7 +1060,7 @@ async function createTools() {
 // INITIALIZATION
 // ============================================================
 
-OBR.onReady(() => {
+OBR.onReady(async () => {
 
   console.log(
     "OBR ON READY FIRED"
@@ -1099,6 +1099,13 @@ OBR.onReady(() => {
         "HEXRCRAWL FOG CONTROL READY"
       );
     };
+
+  const ready =
+    await OBR.scene.isReady();
+
+  if (ready) {
+    await initialize();
+  }
 
   OBR.scene.onReadyChange(
     async (ready) => {
