@@ -92,6 +92,8 @@ function hexcrawlFogServer() {
 }
 
 export default defineConfig({
+  base: "/Hexcrawl-Fog-Control/",
+
   plugins: [hexcrawlFogServer()],
 
   server: {
