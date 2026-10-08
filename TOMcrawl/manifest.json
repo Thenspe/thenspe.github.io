@@ -4,10 +4,10 @@
   "manifest_version": 1,
   "action": {
     "title": "TOMcrawl",
-    "icon": "/icon.svg",
-    "popover": "/",
+    "icon": "icon.svg",
+    "popover": "index.html",
     "width": 360,
     "height": 500
   },
-  "background_url": "/background.html"
+  "background_url": "background.html"
 }
